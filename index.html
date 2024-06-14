@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Đặt tour du lịch online</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <!-- Fonts -->
+  <!-- CSS files -->
+  <link rel="stylesheet" href="assets/css/font-awesome.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/image-hover.css">
+  <link href="assets/css/aos.css" rel="stylesheet" />
+  <!-- CSS files -->
+  <!-- JavaScript files -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- JavaScript files -->
+  <style>
+    .swiper {
+      width: 100%;
+      height: 75%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbarPlaceholder"></div>
+  <!-- Page content -->
+  <div class="container-fill">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/08/hoi-an-quang-nam-vntrip.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://vcdn1-dulich.vnecdn.net/2022/06/01/Hoi-An-VnExpress-5851-16488048-4863-2250-1654057244.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=Z2ea_f0O7kgGZllKmJF92g" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://static.vinwonders.com/2022/12/check-in-pho-co-hoi-an-1.jpg" />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="row p-3 mt-2 tour-types d-flex justify-content-center" data-aos="fade-right">
+      <div class="col-lg-4 d-flex justify-content-center align-items-center tour-type m-2 p-4">
+        <i class="fa-solid fa-glasses fa-xl mx-2"></i>Du lịch TRONG NƯỚC
+      </div>
+      <div class="col-lg-4 d-flex justify-content-center align-items-center tour-type m-2 p-4">
+        <i class="fa-solid fa-wine-glass fa-2x mx-2"></i>Du lịch NƯỚC NGOÀI
+      </div>
+      <div class="col-lg-4 d-flex justify-content-center align-items-center tour-type m-2 p-4">
+        <i class="fa-solid fa-bus fa-xl mx-2"></i>Cho thuê XE DU LỊCH
+      </div>
+      <div class="col-lg-4 d-flex justify-content-center align-items-center tour-type m-2 p-4">
+        <i class="fa-solid fa-hotel fa-xl mx-2"></i>Cho thuê KHÁCH SẠN
+      </div>
+    </div>
+    <!-- Vietnam tours swiper -->
+    <div class="d-flex justify-content-between align-items-center mx-5 mt-5 mb-3">
+      <a class="tours-heading-link">TOUR TRONG NƯỚC</a>
+      <a class="tours-heading-link" href="vietnamTours.html"><i class="fa-solid fa-list mx-2"></i>Xem tất cả</a>
+    </div>
+    <div class="px-5 mb-5" data-aos="fade-right">
+      <div class="vietnam-tours-swiper">
+        <div class="swiper-wrapper" id="sliderVietnamTours">
+          <!-- Chỗ này dùng JavaScript để render dữ liệu, vì bỏ HTML vô này nó rất là dài -->
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+    <!-- Vietnam tours swiper -->
+    <!-- Foreign tours swiper -->
+    <div class="d-flex justify-content-between align-items-center mx-5 mt-5 mb-3">
+      <a class="tours-heading-link">TOUR NƯỚC NGOÀI</a>
+      <a class="tours-heading-link" href="foreignTours.html"><i class="fa-solid fa-list mx-2"></i>Xem tất cả</a>
+    </div>
+    <div class="px-5 mb-5" data-aos="fade-right">
+      <div class="foreign-tours-swiper">
+        <div class="swiper-wrapper" id="sliderForeignTours">
+          <!-- Chỗ này dùng JavaScript để render dữ liệu, vì bỏ HTML vô này nó rất là dài -->
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+    <div class="px-5 mb-5">
+      <div class="m-5 text-center">
+        <span class="h3">Đánh giá của người dùng</span>
+      </div>
+      <div class="d-flex flex-column justify-content-center align-items-center" id="toursCommentsPlaceholder">
+        
+      </div>
+    </div>
+    <!-- Foreign tours swiper -->
+    <div id="footerPlaceholder"></div>
+  </div>
+  <!-- Page content -->
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    new Swiper(".swiper", {
+      autoplay: {
+        delay: 5000,
+      },
+      cssMode: true,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
+    new Swiper(".vietnam-tours-swiper", {
+      autoplay: {
+        delay: 5000,
+      },
+      cssMode: true,
+      simulateTouch: false,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 4,
+        },
+      },
+    });
+
+    new Swiper(".foreign-tours-swiper", {
+      autoplay: {
+        delay: 5000,
+      },
+      cssMode: true,
+      simulateTouch: false,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 4,
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>

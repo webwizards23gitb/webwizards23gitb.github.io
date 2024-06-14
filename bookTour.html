@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Danh sách chuyến đi ở Việt Nam</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <!-- Fonts -->
+  <!-- CSS files -->
+  <link rel="stylesheet" href="assets/css/font-awesome.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/image-hover.css">
+  <link href="assets/css/aos.css" rel="stylesheet" />
+  <!-- CSS files -->
+  <!-- JavaScript files -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <!-- JavaScript files -->
+  <style>
+  </style>
+</head>
+
+<body>
+  <div id="navbarPlaceholder"></div>
+  <!-- Page content -->
+  <div class="container-fill">
+    <div class="p-5">
+      <!-- Tour details -->
+      <p class="mb-1 fw-semibold" style="font-size: 2rem;">Chi tiết tour du lịch</p>
+      <div id="tourDetails"></div>
+      <!-- Tour details -->
+
+      <div class="mt-5">
+        <hr>
+        <div class="d-flex justify-content-center align-items-center m-5"><i class="fa fa-info-circle fa-xl me-2"
+            aria-hidden="true"></i><span class="h2">THÔNG TIN LIÊN HỆ</span></div>
+        <!-- Contact form -->
+        <form>
+          <div class="row">
+            <div class="col-sm-12 col-lg-4">
+              <div class="form-group mb-3">
+                <label class="mb-2">Địa chỉ email</label>
+                <input type="email" class="form-control" placeholder="uchihaitachi@gmail.com">
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
+              <div class="form-group mb-3">
+                <label class="mb-2">Họ và tên</label>
+                <input type="text" class="form-control" placeholder="Uchiha Itachi">
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-4">
+              <div class="form-group mb-3">
+                <label class="mb-2">Số điện thoại</label>
+                <input type="number" class="form-control" placeholder="0987654321">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-lg-4">
+              <div class="form-group mb-3">
+                <label class="mb-2">Địa chỉ</label>
+                <input type="text" class="form-control" placeholder="Xã Hành Thiện, huyện Nghĩa Hành, tỉnh Quảng Ngãi">
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-8">
+              <div class="form-group mb-3">
+                <label class="mb-2">Ghi chú</label>
+                <input type="text" class="form-control" placeholder="Dạ em chào đại ca ạ">
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-12 col-lg-3">
+              <div class="form-group mb-3">
+                <label class="mb-2">Người lớn</label>
+                <input type="number" class="form-control" placeholder="1">
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-3">
+              <div class="form-group mb-3">
+                <label class="mb-2">Trẻ em (5 - 11 tuổi)</label>
+                <input type="number" class="form-control" placeholder="1">
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-3">
+              <div class="form-group mb-3">
+                <label class="mb-2">Trẻ nhỏ (2 - 5 tuổi)</label>
+                <input type="number" class="form-control" placeholder="1">
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-3">
+              <div class="form-group mb-3">
+                <label class="mb-2">Sơ sinh (nhỏ hơn 2 tuổi)</label>
+                <input type="number" class="form-control" placeholder="1">
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-12">
+              <div class="float-end w-sm-100 w-lg-50">
+                <form>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="p-0 pe-2 col-8">
+                        <input type="text" class="form-control" placeholder="Nhập mã giảm giá (nếu có)">
+                      </div>
+                      <div class="p-0 col-4">
+                        <button type="button" class="w-100 btn btn-success" id="checkCouponCode">Kiểm tra</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <p class="text-danger fw-semibold">Mã giảm giá chỉ được áp dụng khi bạn nhấn vào nút "Kiểm tra"</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <span class="fw-bold">Tổng giá trị:</span> <span class="h3 text-danger" id="finalPrice"></span>
+                </div>
+                <button type="button" class="btn btn-success" id="confirmPurchase">XÁC NHẬN ĐƠN HÀNG</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- Contact form -->
+      </div>
+    </div>
+    <!-- Foreign tours swiper -->
+    <div id="footerPlaceholder"></div>
+  </div>
+  <!-- Page content -->
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

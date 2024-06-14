@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Danh sách chuyến đi ở Việt Nam</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <!-- Fonts -->
+  <!-- CSS files -->
+  <link rel="stylesheet" href="assets/css/font-awesome.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/image-hover.css">
+  <link href="assets/css/aos.css" rel="stylesheet" />
+  <!-- CSS files -->
+  <!-- JavaScript files -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- JavaScript files -->
+  <style>
+  </style>
+</head>
+
+<body>
+  <div id="navbarPlaceholder"></div>
+  <!-- Page content -->
+  <div class="container-fill">
+    <div class="row p-3 mt-2 tour-types d-flex justify-content-center" data-aos="fade-right">
+      <div class="col-lg-4 d-flex justify-content-center align-items-center tour-type m-2 p-4">
+        <i class="fa-solid fa-glasses fa-xl mx-2"></i>Du lịch TRONG NƯỚC
+      </div>
+      <div class="col-lg-4 d-flex justify-content-center align-items-center tour-type m-2 p-4">
+        <i class="fa-solid fa-wine-glass fa-2x mx-2"></i>Du lịch NƯỚC NGOÀI
+      </div>
+      <div class="col-lg-4 d-flex justify-content-center align-items-center tour-type m-2 p-4">
+        <i class="fa-solid fa-bus fa-xl mx-2"></i>Cho thuê XE DU LỊCH
+      </div>
+      <div class="col-lg-4 d-flex justify-content-center align-items-center tour-type m-2 p-4">
+        <i class="fa-solid fa-hotel fa-xl mx-2"></i>Cho thuê KHÁCH SẠN
+      </div>
+    </div>
+    <div class="d-flex flex-column mx-5 mt-5 mb-3">
+      <a class="tours-heading-link">DANH SÁCH KHÁC SẠN CÓ PHÍ RẺ NHẤT</a>
+      <a>Đặt phòng khách sạn - Tổng hợp hơn 200,000 khách sạn trong nước và quốc tế đang có khuyến mãi giá tốt, quý
+        khách có thể dễ dàng tìm kiếm phòng khách sạn cần đặt ngay tại website công ty <b>TRAVIZARD</b>. Bên cạnh việc
+        có thể đặt mua được phòng khách sạn giá rẻ trực tuyến đơn giản, an toàn, tiết kiệm...quý khách còn có thể tham
+        khảo, so sánh giá phòng khách sạn được cập nhật liên tục tại thời điểm quý khách muốn đặt mua.</a>
+    </div>
+    <div class="px-5">
+      <div class="row" id="hotels"></div>
+      <div class="row">
+        <div class="d-flex justify-content-center col" id="pagination"></div>
+      </div>
+      <div class="mt-5 text-center">
+        <span class="h3">Tại sao lại lựa chọn đặt chỗ tại Travizard?</span>
+      </div>
+      <div class="mt-3 mb-5">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <div class="why-choose-us-picture">
+                <img class="img-fluid object-fit-cover" loading="lazy" src="assets/images/1-why-choose-us-hotels.webp">
+              </div>
+              <div class="why-choose-us-title">
+                <span>Giá rẻ mỗi ngày với ưu đãi đặc biệt dành riêng cho ứng dụng</span>
+              </div>
+              <div class="why-choose-us-content">
+                <p class="fw-semibold">Đặt phòng qua ứng dụng để nhận giá tốt nhất với các khuyến mãi tuyệt vời!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <div class="why-choose-us-picture">
+                <img class="img-fluid object-fit-cover" loading="lazy" src="assets/images/2-why-choose-us-hotels.png">
+              </div>
+              <div class="why-choose-us-title">
+                <span>Phương thức thanh toán an toàn và linh hoạt</span>
+              </div>
+              <div class="why-choose-us-content">
+                <p class="fw-semibold">Giao dịch trực tuyến an toàn với nhiều lựa chọn như thanh toán tại cửa hàng tiện lợi, chuyển khoản ngân hàng, thẻ tín dụng đến Internet Banking. Không tính phí giao dịch.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <div class="why-choose-us-picture">
+                <img class="img-fluid object-fit-cover" loading="lazy" src="assets/images/3-why-choose-us-hotels.webp">
+              </div>
+              <div class="why-choose-us-title">
+                <span>Hỗ trợ khách hàng 24/7</span>
+              </div>
+              <div class="why-choose-us-content">
+                <p class="fw-semibold">Đội ngũ nhân viên hỗ trợ khách hàng luôn sẵn sàng giúp đỡ bạn trong từng bước của quá trình đặt vé.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="d-flex flex-column justify-content-center align-items-center">
+              <div class="why-choose-us-picture">
+                <img class="img-fluid object-fit-cover" loading="lazy" src="assets/images/4-why-choose-us-hotels.webp">
+              </div>
+              <div class="why-choose-us-title">
+                <span>Khách thực, đánh giá thực</span>
+              </div>
+              <div class="why-choose-us-content">
+                <p class="fw-semibold">Hơn 10.000.000 đánh giá, bình chọn đã được xác thực từ du khách sẽ giúp bạn đưa ra lựa chọn đúng đắn.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="m-5 text-center">
+        <span class="h3">Đánh giá của người dùng</span>
+      </div>
+      <div class="d-flex flex-column justify-content-center align-items-center" id="hotelsCommentsPlaceholder">
+        
+      </div>
+    </div>
+    <!-- Foreign tours swiper -->
+    <div id="footerPlaceholder"></div>
+  </div>
+  <!-- Page content -->
+  <script>
+    AOS.init();
+  </script>
+  <script>
+
+  </script>
+</body>
+
+</html>

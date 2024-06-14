@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "author": "Hồ Văn Kiệt",
+    "facebook": "https://www.facebook.com/vnkt2975addnta",
+    "avatar": "assets/images/avatar-hvk.png",
+    "content": "Khách sạn tuyệt vời với dịch vụ xuất sắc và vị trí thuận lợi. Rất đáng giới thiệu!",
+    "lastEdited": "2 giờ trước",
+    "likes": 53,
+    "dislikes": 54 
+  },
+  {
+    "id": 2,
+    "author": "Nguyễn Tấn Dũng",
+    "facebook": "https://www.facebook.com/nguyenss.nhokss.507",
+    "avatar": "assets/images/avatar-ntd.png",
+    "content": "Khách sạn tuyệt vời! Nhân viên thân thiện và nhiệt tình, phòng sạch sẽ và thoải mái.",
+    "lastEdited": "5 giờ trước",
+    "likes": 21,
+    "dislikes": 52 
+  },
+  {
+    "id": 3,
+    "author": "Nguyễn Văn Cường",
+    "avatar": "assets/images/avatar-nvc.png",
+    "facebook": "https://www.facebook.com/profile.php?id=100046184703548",
+    "content": "Dịch vụ khách sạn rất tốt, phòng đẹp và tiện nghi. Sẽ quay lại lần sau!",
+    "lastEdited": "5 giờ trước",
+    "likes": 66,
+    "dislikes": 32
+  },
+  {
+    "id": 4,
+    "author": "Nguyễn Văn Hoàng",
+    "facebook": "https://www.facebook.com/profile.php?id=100047695143130",
+    "avatar": "assets/images/avatar-nvh.png",
+    "content": "Khách sạn đẹp và thoải mái, nhân viên nhiệt tình và thân thiện.",
+    "lastEdited": "6 giờ trước",
+    "likes": 44,
+    "dislikes": 33
+  },
+  {
+    "id": 5,
+    "author": "Lê Anh Quân",
+    "facebook": "https://www.facebook.com/profile.php?id=100034594907474",
+    "avatar": "assets/images/avatar-ql.png",
+    "content": "Dịch vụ tốt và không gian thoải mái. Sẽ quay lại khi có dịp!",
+    "lastEdited": "7 giờ trước",
+    "likes": 32,
+    "dislikes": 37 
+  },
+  {
+    "id": 6,
+    "author": "Trần Ngọc Anh Huy",
+    "facebook": "https://www.facebook.com/ANHHUYREAL/",
+    "avatar": "assets/images/avatar-tnah.png",
+    "content": "Khách sạn tuyệt vời! Dịch vụ và tiện nghi đều rất tốt.",
+    "lastEdited": "3 giờ trước",
+    "likes": 76,
+    "dislikes": 34 
+  },
+  {
+    "id": 7,
+    "author": "Võ Ngọc Bảo",
+    "facebook": "https://www.facebook.com/sussybaka1337/",
+    "avatar": "assets/images/avatar-vnb.png",
+    "content": "Phòng sạch sẽ và dịch vụ tốt. Thích hợp cho chuyến đi công tác.",
+    "lastEdited": "9 giờ trước",
+    "likes": 66,
+    "dislikes": 53 
+  }
+]

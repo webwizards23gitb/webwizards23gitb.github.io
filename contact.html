@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Đặt tour du lịch online</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <!-- Fonts -->
+  <!-- CSS files -->
+  <link rel="stylesheet" href="assets/css/font-awesome.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/image-hover.css">
+  <link href="assets/css/aos.css" rel="stylesheet" />
+  <!-- CSS files -->
+  <!-- JavaScript files -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- JavaScript files -->
+  <style>
+    .swiper {
+      width: 100%;
+      height: 75%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbarPlaceholder"></div>
+  <!-- Page content -->
+  <div class="container-fill">
+    <div class="p-5 mt-5">
+      <div class="p-3 row border" id="contactFormContainer">
+        <div class="col-12" data-aos="fade-right">
+          <form>
+            <h3 class="mb-3">LIÊN HỆ HOẶC ĐÓNG GÓP Ý KIẾN</h3>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingFullnameInput" placeholder="name@example.com">
+              <label for="floatingFullnameInput" style="font-size: 0.75rem;">Họ và tên</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingEmailInput" placeholder="name@example.com">
+              <label for="floatingEmailInput" style="font-size: 0.75rem;">Địa chỉ email</label>
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingContent"
+                style="height: 100px"></textarea>
+              <label for="floatingContent">Nội dung</label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="" id="sendLastestMessageCheckbox">
+              <label class="form-check-label" for="sendLastestMessageCheckbox">
+                Gửi email thông báo cho tôi khi có phản hồi mới nhất
+              </label>
+            </div>
+            <button id="contactButton" type="button" class="btn btn-success">Gửi ý kiến</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Foreign tours swiper -->
+    <div id="footerPlaceholder"></div>
+  </div>
+  <!-- Page content -->
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    $("#contactButton").on("click", function () {
+      Swal.fire({
+        icon: "success",
+        title: "Gửi phản hồi thành công!",
+        text: "Ý kiến của bạn đã được ghi nhận, hãy kiểm tra email thường xuyên.",
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Đăng nhập tài khoản</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <!-- Fonts -->
+  <!-- CSS files -->
+  <link rel="stylesheet" href="assets/css/font-awesome.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <link href="assets/css/aos.css" rel="stylesheet" />
+  <!-- CSS files -->
+  <!-- JavaScript files -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- JavaScript files -->
+  <style>
+  </style>
+</head>
+
+<body>
+  <div id="navbarPlaceholder"></div>
+  <!-- Page content -->
+  <div class="container-fill">
+    <div class="p-5 mt-5">
+      <div class="row">
+        <div class="col-12 col-lg-6" data-aos="fade-right">
+          <!-- Đăng nhập -->
+          <form>
+            <h3 class="mb-3">ĐĂNG NHẬP TÀI KHOẢN</h3>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingEmailInputLogin" placeholder="name@example.com">
+              <label for="floatingEmailInputLogin" style="font-size: 0.75rem;">Địa chỉ email</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingPasswordInputLogin" placeholder="********">
+              <label for="floatingPasswordInputLogin" style="font-size: 0.75rem;">Mật khẩu</label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="" id="rememberMeCheckbox">
+              <label class="form-check-label" for="rememberMeCheckbox">
+                Lưu trạng thái đăng nhập
+              </label>
+            </div>
+            <button id="loginButton" type="button" class="btn btn-success">Đăng nhập</button>
+          </form>
+          <!-- Đăng nhập -->
+        </div>
+        <div class="d-block d-lg-none">
+          <hr>
+        </div>
+        <div class="col-12 col-lg-6" data-aos="fade-right">
+          <!-- Đăng ký -->
+          <h3 class="mb-3">CHƯA CÓ TÀI KHOẢN? HÃY ĐĂNG KÝ NGAY</h3>
+          <form>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingFullnameInput" placeholder="name@example.com">
+              <label for="floatingFullnameInput" style="font-size: 0.75rem;">Họ và tên</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingEmailInputRegister" placeholder="name@example.com">
+              <label for="floatingEmailInputRegister" style="font-size: 0.75rem;">Địa chỉ email</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="number" class="form-control" id="floatingPhoneNumberInput" placeholder="name@example.com">
+              <label for="floatingPhoneNumberInput" style="font-size: 0.75rem;">Số điện thoại</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingPasswordInputRegister" placeholder="********">
+              <label for="floatingPasswordInputRegister" style="font-size: 0.75rem;">Mật khẩu</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingRePasswordInput" placeholder="********">
+              <label for="floatingRePasswordInput" style="font-size: 0.75rem;">Nhập lại mật khẩu</label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="" id="acceptTOSCheckbox">
+              <label class="form-check-label" for="acceptTOSCheckbox">
+                Tôi đồng ý với các điều khoản dịch vụ của trang web
+              </label>
+            </div>
+            <button id="registerButton" type="button" class="btn btn-success">Đăng ký</button>
+          </form>
+          <!-- Đăng ký -->
+        </div>
+      </div>
+    </div>
+    <div id="footerPlaceholder"></div>
+  </div>
+  <!-- Page content -->
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    $("#loginButton").on("click", function () {
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 5000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Đăng nhập thành công, chuyển hướng đến trang chủ trong 5 giây..."
+      });
+      setTimeout(function () {
+        window.location.href = "index.html";
+      }, 5000);
+    });
+
+    $("#registerButton").on("click", function () {
+      Swal.fire({
+        icon: "success",
+        title: "Đăng ký thành công!",
+        text: "Chức năng đang được cập nhật...",
+      });
+    });
+  </script>
+</body>
+
+</html>

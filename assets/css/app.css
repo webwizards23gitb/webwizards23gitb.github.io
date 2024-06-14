@@ -1,0 +1,241 @@
+body {
+  padding: 64px 0px 0px 0px;
+  margin: 0;
+}
+
+.application-logo {
+  width: 175px;
+  height: 25px;
+}
+
+.container-fill {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.cart-button-container {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 20;
+}
+
+.cart-button {
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #041675;
+  border-radius: 100%;
+  width: 55px;
+  height: 55px;
+  transition-duration: 300ms;
+}
+
+.cart-button:focus {
+  transition-duration: 300ms;
+  transform: scale(0.9);
+}
+
+.offcanvas-status {
+  display: block;
+}
+
+/* Reset Bootstrap column padding and margin */
+#offcanvasCart .offcanvas-body div[class*="col"] {
+  padding: 0;
+  margin: 0;
+}
+
+#offcanvasCart {
+  width: 100%;
+}
+
+.comment {
+  width: 100%;
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    padding: 112px 0px 0px 0px;
+  }
+  .comment {
+    width: 50%;
+  }
+  #offcanvasCart {
+    width: 50%;
+  }
+  .offcanvas-status {
+    display: none;
+  }
+}
+
+.flash-contact {
+  color: white;
+  animation: flashingText 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flashingText {
+  from {
+    color: white;
+  }
+  to {
+    color: yellow;
+  }
+}
+
+.swiper-slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar-textlink {
+  padding: 5px;
+  transition-duration: 100ms;
+  color: white;
+}
+
+.navbar-textlink.active {
+  border-bottom: 3px solid #58afe4;
+  color: #58afe4;
+}
+
+.navbar-textlink:hover {
+  border-bottom: 3px solid #58afe4;
+  color: #58afe4;
+}
+
+.tour-types {
+  background-color: rgb(238, 238, 238);
+}
+
+.tour-type {
+  border-radius: 10px;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+
+.tour-type:hover {
+  background-color: #030f16;
+  color: white;
+}
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.navbar-nav > .nav-item > .nav-link {
+  border-radius: 10px;
+}
+
+.navbar-nav > .nav-item > .nav-link.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.navbar-nav > .nav-item > .nav-link:hover {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.tours-heading-link {
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition-duration: 150ms;
+  font-size: 1.5rem;
+}
+
+.tours-heading-link:hover {
+  text-decoration: none;
+  color: #58afe4;
+}
+
+.tour-title {
+  color: black;
+  font-weight: 600;
+  transition-duration: 150ms;
+}
+
+.tour-title:hover {
+  text-decoration: none;
+  color: #58afe4;
+}
+
+#contactFormContainer {
+  border-radius: 10px;
+  background-color: white;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.footer-content {
+  width: 95%;
+  border-top: 3px solid #c23696;
+}
+
+.social-link {
+  list-style-type: none;
+}
+
+ul[class*="social-links"] {
+  padding: 0;
+  margin: 0;
+}
+
+a[class*="fa"] {
+  text-decoration: none;
+}
+
+
+.footer-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e84033;
+}
+
+.footer-title {
+  padding: 0.25rem 0rem 0.25rem 0rem;
+  border-bottom: 3px solid #e84033;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+iframe {
+  display: block;
+}
+
+.why-choose-us-picture {
+  width: 150px;
+  height: 150px;
+}
+
+.why-choose-us-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.why-choose-us-content {
+  font-size: 1.3rem;
+}
+
+.comment-author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  object-fit: cover;
+}

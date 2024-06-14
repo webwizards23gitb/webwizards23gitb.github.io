@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "author": "Hồ Văn Kiệt",
+    "facebook": "https://www.facebook.com/vnkt2975addnta",
+    "avatar": "assets/images/avatar-hvk.png",
+    "content": "Tour du lịch rất thú vị và đa dạng, nhân viên hướng dẫn am hiểu về địa điểm, tạo cảm giác an tâm cho du khách.",
+    "lastEdited": "2 giờ trước",
+    "likes": 53,
+    "dislikes": 54 
+  },
+  {
+    "id": 2,
+    "author": "Nguyễn Tấn Dũng",
+    "facebook": "https://www.facebook.com/nguyenss.nhokss.507",
+    "avatar": "assets/images/avatar-ntd.png",
+    "content": "Dịch vụ tour du lịch rất chuyên nghiệp, chất lượng đáng giá mỗi đồng bạc.",
+    "lastEdited": "5 giờ trước",
+    "likes": 21,
+    "dislikes": 52 
+  },
+  {
+    "id": 3,
+    "author": "Nguyễn Văn Cường",
+    "facebook": "https://www.facebook.com/profile.php?id=100046184703548",
+    "avatar": "assets/images/avatar-nvc.png",
+    "content": "Tour du lịch độc đáo và thú vị, giúp tôi khám phá những điều mới lạ và tận hưởng những trải nghiệm đáng nhớ.",
+    "lastEdited": "5 giờ trước",
+    "likes": 66,
+    "dislikes": 32
+  },
+  {
+    "id": 4,
+    "author": "Nguyễn Văn Hoàng",
+    "facebook": "https://www.facebook.com/profile.php?id=100047695143130",
+    "avatar": "assets/images/avatar-nvh.png",
+    "content": "Dịch vụ tour du lịch chuyên nghiệp và tận tình, tôi rất hài lòng với chuyến đi của mình.",
+    "lastEdited": "6 giờ trước",
+    "likes": 44,
+    "dislikes": 33
+  },
+  {
+    "id": 5,
+    "author": "Lê Anh Quân",
+    "facebook": "https://www.facebook.com/profile.php?id=100034594907474",
+    "avatar": "assets/images/avatar-ql.png",
+    "content": "Tour du lịch với giá cả phải chăng và hoạt động hấp dẫn, tôi đã có một kỳ nghỉ tuyệt vời.",
+    "lastEdited": "7 giờ trước",
+    "likes": 32,
+    "dislikes": 37 
+  },
+  {
+    "id": 6,
+    "author": "Trần Ngọc Anh Huy",
+    "facebook": "https://www.facebook.com/ANHHUYREAL/",
+    "avatar": "assets/images/avatar-tnah.png",
+    "content": "Dịch vụ tour du lịch chất lượng cao và đa dạng, mang lại cho tôi những trải nghiệm độc đáo và thú vị.",
+    "lastEdited": "3 giờ trước",
+    "likes": 76,
+    "dislikes": 34 
+  },
+  {
+    "id": 7,
+    "author": "Võ Ngọc Bảo",
+    "facebook": "https://www.facebook.com/sussybaka1337/",
+    "avatar": "assets/images/avatar-vnb.png",
+    "content": "Tôi đã tham gia tour du lịch của trang web này và không hề thất vọng. Dịch vụ rất tốt và chuyên nghiệp.",
+    "lastEdited": "9 giờ trước",
+    "likes": 66,
+    "dislikes": 53 
+  }
+]

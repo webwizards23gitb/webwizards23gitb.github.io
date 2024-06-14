@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "picture": "assets/images/khach-san-phu-quoc-spa-du-lich-viet.jpg",
+    "title": "VINPEARL RESORT & SPA PHU QUOC",
+    "price": 3999000,
+    "phone": "0319 971 069"
+  },
+  {
+    "id": 2,
+    "picture": "assets/images/du-lich-viet(4).jpg",
+    "title": "VINPEARL RESORT & GOLF PHU QUOC",
+    "price": 2850000,
+    "phone": "0843 428 439"
+  },
+  {
+    "id": 3,
+    "picture": "assets/images/Vinpearl-hoi-an-du-lich-viet.jpg",
+    "title": "VINPEARL RESORT & GOLF NAM HỘI AN",
+    "price": 4150000,
+    "phone": "0743 432 483"
+  },
+  {
+    "id": 4,
+    "picture": "assets/images/Vinper-da-nang-du-lich-viet.jpg",
+    "title": "VINPEARL CONDOTEL RIVERFRONT DA NANG",
+    "price": 2400000,
+    "phone": "0463 432 432"
+  },
+  {
+    "id": 5,
+    "picture": "assets/images/Khach-san-vin-osis-du-lich-viet.jpg",
+    "title": "KHÁCH SẠN VINOASIS PHU QUOC",
+    "price": 2500000,
+    "phone": "0723 943 483"
+  },
+  {
+    "id": 6,
+    "picture": "assets/images/kham-pha-vin-per-3-du-lich-viet.jpg",
+    "title": "VINPEARL DISCOVERY 3 PHU QUOC",
+    "price": 4900000,
+    "phone": "0237 423 420"
+  },
+  {
+    "id": 7,
+    "picture": "assets/images/Vinper-2-du-lich-viet.jpg",
+    "title": "VINPEARL DISCOVERY 2 PHU QUOC",
+    "price": 6900000,
+    "phone": "0432 432 987"
+  },
+  {
+    "id": 8,
+    "picture": "assets/images/vinper-phu-quoc-620-510(1).jpg",
+    "title": "VINPEARL DISCOVERY 1 PHU QUOC",
+    "price": 5100000,
+    "phone": "0483 432 987"
+  },
+  {
+    "id": 9,
+    "picture": "assets/images/khach-san-intourco-vung-tau_du-lich-viet.jpg",
+    "title": "Đặt phòng khách sạn Intourco 4 sao tại Vũng Tàu giá tốt",
+    "price": 1000000,
+    "phone": "0234 689 542"
+  },
+  {
+    "id": 10,
+    "picture": "assets/images/khac-san-sammy-vung-tau-gia-re_du-lich-viet.jpg",
+    "title": "Đặt phòng khách sạn Sammy Vũng Tàu giá tốt",
+    "price": 1030000,
+    "phone": "0435 324 832"
+  },
+  {
+    "id": 11,
+    "picture": "assets/images/khach-san-phoenix-vung-tau_du-lich-viet.jpg",
+    "title": "Đặt phòng khách sạn Phoenix Vũng Tàu giá tốt",
+    "price": 1900000,
+    "phone": "0432 423 654"
+  },
+  {
+    "id": 12,
+    "picture": "assets/images/dat-phong-khach-san-new-wave-vung-tau-gia-tot_du-lich-viet.jpg",
+    "title": "Đặt phòng khách sạn New Wave Vũng Tàu giá tốt",
+    "price": 1840000,
+    "phone": "0567 324 645"
+  }
+]
