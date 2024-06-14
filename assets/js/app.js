@@ -528,7 +528,7 @@ async function renderComments(commentType, selector) {
           <div class="comments-dislikes">
             <button class="btn btn-warning">
               <i class="fa-solid fa-thumbs-down"></i>
-              <span>${comment.dislikes} Likes</span>
+              <span>${comment.dislikes} Dislikes</span>
             </button>
           </div>
           <div class="comments-report">
