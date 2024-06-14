@@ -515,29 +515,25 @@ async function renderComments(commentType, selector) {
         </div>
         <!-- Comment header -->
         <!-- Comment content -->
-        <div class="mt-3">
+        <div class="mt-3 mb-3">
           <span style="font-size: 1.15rem;">${comment.content}</span>
         </div>
-        <div class="d-flex comment-actions mt-3 justify-content-between">
-          <div class="comment-likes">
-            <button class="btn btn-primary">
-              <i class="fa-solid fa-heart"></i>
-              <span>${comment.likes} Likes</span>
-            </button>
-          </div>
-          <div class="comments-dislikes">
-            <button class="btn btn-warning">
-              <i class="fa-solid fa-thumbs-down"></i>
-              <span>${comment.dislikes} Likes</span>
-            </button>
-          </div>
-          <div class="comments-report">
-            <button class="btn btn-danger">
-              <i class="fa-solid fa-flag"></i>
-              <span>Report</span>
-            </button>
-          </div>
+        <hr>
+        <div class="d-flex comment-actions justify-content-between">
+          <button class="comment-likes">
+            <i class="fa-solid fa-heart"></i>
+            <span>${comment.likes} Likes</span>
+          </button>
+          <button class="comment-dislikes">
+            <i class="fa-solid fa-thumbs-down"></i>
+            <span>${comment.dislikes} Dislikes</span>
+          </button>
+          <button class="comment-report">
+            <i class="fa-solid fa-flag"></i>
+            <span>Report</span>
+          </button>
         </div>
+        <hr>
         <!-- Comment content -->
       </div>
     </div>

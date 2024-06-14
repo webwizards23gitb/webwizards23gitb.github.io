@@ -53,7 +53,7 @@
         có thể đặt mua được phòng khách sạn giá rẻ trực tuyến đơn giản, an toàn, tiết kiệm...quý khách còn có thể tham
         khảo, so sánh giá phòng khách sạn được cập nhật liên tục tại thời điểm quý khách muốn đặt mua.</a>
     </div>
-    <div class="px-5">
+    <div class="px-2">
       <div class="row" id="hotels"></div>
       <div class="row">
         <div class="d-flex justify-content-center col" id="pagination"></div>
@@ -85,7 +85,8 @@
                 <span>Phương thức thanh toán an toàn và linh hoạt</span>
               </div>
               <div class="why-choose-us-content">
-                <p class="fw-semibold">Giao dịch trực tuyến an toàn với nhiều lựa chọn như thanh toán tại cửa hàng tiện lợi, chuyển khoản ngân hàng, thẻ tín dụng đến Internet Banking. Không tính phí giao dịch.</p>
+                <p class="fw-semibold">Giao dịch trực tuyến an toàn với nhiều lựa chọn như thanh toán tại cửa hàng tiện
+                  lợi, chuyển khoản ngân hàng, thẻ tín dụng đến Internet Banking. Không tính phí giao dịch.</p>
               </div>
             </div>
           </div>
@@ -98,7 +99,8 @@
                 <span>Hỗ trợ khách hàng 24/7</span>
               </div>
               <div class="why-choose-us-content">
-                <p class="fw-semibold">Đội ngũ nhân viên hỗ trợ khách hàng luôn sẵn sàng giúp đỡ bạn trong từng bước của quá trình đặt vé.</p>
+                <p class="fw-semibold">Đội ngũ nhân viên hỗ trợ khách hàng luôn sẵn sàng giúp đỡ bạn trong từng bước của
+                  quá trình đặt vé.</p>
               </div>
             </div>
           </div>
@@ -111,7 +113,8 @@
                 <span>Khách thực, đánh giá thực</span>
               </div>
               <div class="why-choose-us-content">
-                <p class="fw-semibold">Hơn 10.000.000 đánh giá, bình chọn đã được xác thực từ du khách sẽ giúp bạn đưa ra lựa chọn đúng đắn.</p>
+                <p class="fw-semibold">Hơn 10.000.000 đánh giá, bình chọn đã được xác thực từ du khách sẽ giúp bạn đưa
+                  ra lựa chọn đúng đắn.</p>
               </div>
             </div>
           </div>
@@ -120,8 +123,39 @@
       <div class="m-5 text-center">
         <span class="h3">Đánh giá của người dùng</span>
       </div>
+      <div class="d-flex justify-content-center mb-3">
+        <div class="commentBox">
+          <div class="p-3 row border" id="contactFormContainer">
+            <div class="col-12 aos-init aos-animate" data-aos="fade-right">
+              <form>
+                <h3 class="mb-3">Gửi đánh giá</h3>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingFullnameInput" placeholder="name@example.com">
+                  <label for="floatingFullnameInput" style="font-size: 0.75rem;">Họ và tên</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingEmailInput" placeholder="name@example.com">
+                  <label for="floatingEmailInput" style="font-size: 0.75rem;">Địa chỉ email</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingContent"
+                    style="height: 100px"></textarea>
+                  <label for="floatingContent">Nội dung</label>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" value="" id="sendLastestMessageCheckbox">
+                  <label class="form-check-label" for="sendLastestMessageCheckbox">
+                    Gửi email thông báo cho tôi khi có phản hồi mới nhất
+                  </label>
+                </div>
+                <button id="contactButton" type="button" class="btn btn-success">Đăng bình luận</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="d-flex flex-column justify-content-center align-items-center" id="hotelsCommentsPlaceholder">
-        
+
       </div>
     </div>
     <!-- Foreign tours swiper -->

@@ -56,9 +56,16 @@ body {
   width: 100%;
 }
 
+.commentBox {
+  width: 100%;
+}
+
 @media only screen and (min-width: 992px) {
   body {
     padding: 112px 0px 0px 0px;
+  }
+  .commentBox {
+    width: 50%;
   }
   .comment {
     width: 50%;
@@ -238,4 +245,26 @@ iframe {
   height: 48px;
   border-radius: 100%;
   object-fit: cover;
+}
+
+.comment-likes, .comment-dislikes, .comment-report {
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  transition-duration: 100ms;
+}
+
+hr {
+  margin: 0.2rem;
+}
+
+.comment-likes:hover, .comment-dislikes:hover, .comment-report:hover {
+  background-color: #e4e6eb;
+}
+
+.comment-likes:focus, .comment-dislikes:focus, .comment-report:focus {
+  transform: scale(0.9);
+  transition-duration: 100ms;
 }
