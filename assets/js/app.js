@@ -522,15 +522,15 @@ async function renderComments(commentType, selector) {
         <div class="d-flex comment-actions justify-content-between">
           <button class="comment-likes">
             <i class="fa-solid fa-heart"></i>
-            <span>${comment.likes} Likes</span>
+            <span class="fw-semibold">${comment.likes} Likes</span>
           </button>
           <button class="comment-dislikes">
             <i class="fa-solid fa-thumbs-down"></i>
-            <span>${comment.dislikes} Dislikes</span>
+            <span class="fw-semibold">${comment.dislikes} Dislikes</span>
           </button>
           <button class="comment-report">
             <i class="fa-solid fa-flag"></i>
-            <span>Report</span>
+            <span class="fw-semibold">Report</span>
           </button>
         </div>
         <hr>
