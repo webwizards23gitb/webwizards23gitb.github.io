@@ -7,14 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
-  <!-- Fonts -->
   <!-- CSS files -->
   <link rel="stylesheet" href="assets/css/font-awesome.css" />
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/app.css" />
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
   <link href="assets/css/aos.css" rel="stylesheet" />
-  <!-- CSS files -->
   <!-- JavaScript files -->
   <script src="assets/js/jquery-3.7.1.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -22,8 +20,13 @@
   <script src="assets/js/aos.js"></script>
   <script src="assets/js/sweetalert.min.js"></script>
   <script src="assets/js/app.js"></script>
-  <!-- JavaScript files -->
+  <!-- Custom CSS -->
   <style>
+    .custom-panel {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+    }
   </style>
 </head>
 
@@ -33,7 +36,7 @@
   <div class="container-fill">
     <div class="p-5 mt-5">
       <div class="row">
-        <div class="col-12 col-lg-6" data-aos="fade-right">
+        <div class="col-12 col-lg-6 mt-3 mt-lg-0" data-aos="fade-right">
           <!-- Đăng nhập -->
           <form id="loginForm">
             <h3 class="mb-3">ĐĂNG NHẬP TÀI KHOẢN</h3>
@@ -55,41 +58,40 @@
           </form>
           <!-- Đăng nhập -->
         </div>
-        <div class="d-block d-lg-none">
-          <hr>
-        </div>
-        <div class="col-12 col-lg-6" data-aos="fade-right">
+        <div class="col-12 col-lg-6 mt-3 mt-lg-0" data-aos="fade-right">
           <!-- Đăng ký -->
-          <h3 class="mb-3">CHƯA CÓ TÀI KHOẢN? HÃY ĐĂNG KÝ NGAY</h3>
-          <form id="registerForm">
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="floatingFullnameInput" placeholder="name@example.com">
-              <label for="floatingFullnameInput" style="font-size: 0.75rem;">Họ và tên</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="floatingEmailInputRegister" placeholder="name@example.com">
-              <label for="floatingEmailInputRegister" style="font-size: 0.75rem;">Địa chỉ email</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="number" class="form-control" id="floatingPhoneNumberInput" placeholder="name@example.com">
-              <label for="floatingPhoneNumberInput" style="font-size: 0.75rem;">Số điện thoại</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="password" class="form-control" id="floatingPasswordInputRegister" placeholder="********">
-              <label for="floatingPasswordInputRegister" style="font-size: 0.75rem;">Mật khẩu</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="password" class="form-control" id="floatingRePasswordInput" placeholder="********">
-              <label for="floatingRePasswordInput" style="font-size: 0.75rem;">Nhập lại mật khẩu</label>
-            </div>
-            <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" value="" id="acceptTOSCheckbox">
-              <label class="form-check-label" for="acceptTOSCheckbox">
-                Tôi đồng ý với các điều khoản dịch vụ của trang web
-              </label>
-            </div>
-            <button type="button" class="btn btn-success" onclick="register()">Đăng ký</button>
-          </form>
+          <div class="custom-panel">
+            <h3 class="mb-3">CHƯA CÓ TÀI KHOẢN? HÃY ĐĂNG KÝ NGAY</h3>
+            <form id="registerForm">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingFullnameInput" placeholder="Họ và tên">
+                <label for="floatingFullnameInput" style="font-size: 0.75rem;">Họ và tên</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingEmailInputRegister" placeholder="name@example.com">
+                <label for="floatingEmailInputRegister" style="font-size: 0.75rem;">Địa chỉ email</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="floatingPhoneNumberInput" placeholder="Số điện thoại">
+                <label for="floatingPhoneNumberInput" style="font-size: 0.75rem;">Số điện thoại</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPasswordInputRegister" placeholder="********">
+                <label for="floatingPasswordInputRegister" style="font-size: 0.75rem;">Mật khẩu</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingRePasswordInput" placeholder="********">
+                <label for="floatingRePasswordInput" style="font-size: 0.75rem;">Nhập lại mật khẩu</label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" value="" id="acceptTOSCheckbox">
+                <label class="form-check-label" for="acceptTOSCheckbox">
+                  Tôi đồng ý với các điều khoản dịch vụ của trang web
+                </label>
+              </div>
+              <button type="button" class="btn btn-success" onclick="register()">Đăng ký</button>
+            </form>
+          </div>
           <!-- Đăng ký -->
         </div>
       </div>
@@ -99,15 +101,12 @@
   <!-- Page content -->
   <script>
     AOS.init();
-    
+
     function login() {
-      // Lấy giá trị từ form đăng nhập
       var email = document.getElementById("floatingEmailInputLogin").value;
       var password = document.getElementById("floatingPasswordInputLogin").value;
 
-      // Kiểm tra các trường có được nhập đầy đủ hay không
       if (email === "" || password === "") {
-        // Hiển thị thông báo lỗi nếu có trường nào chưa nhập đầy đủ
         Swal.fire({
           icon: "error",
           title: "Lỗi!",
@@ -116,7 +115,6 @@
         return;
       }
 
-      // Nếu nhập đầy đủ, thực hiện đăng nhập thành công
       const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
@@ -138,35 +136,30 @@
     }
 
     function register() {
-      // Lấy giá trị từ form đăng ký
       var fullname = document.getElementById("floatingFullnameInput").value;
       var email = document.getElementById("floatingEmailInputRegister").value;
       var phone = document.getElementById("floatingPhoneNumberInput").value;
-      var password = document.getElementById("floatingPasswordInput")
-  // Kiểm tra các trường có được nhập đầy đủ và đồng ý điều khoản hay không
-  if (fullname === "" || email === "" || phone === "" || password === "" || rePassword === "" || !acceptTOS) {
-    // Hiển thị thông báo lỗi nếu có trường nào chưa nhập đầy đủ hoặc không đồng ý điều khoản
-    Swal.fire({
-      icon: "error",
-      title: "Lỗi!",
-      text: "Vui lòng nhập đầy đủ thông tin và đồng ý với các điều khoản dịch vụ.",
-    });
-    return;
-  }
+      var password = document.getElementById("floatingPasswordInputRegister").value;
+      var rePassword = document.getElementById("floatingRePasswordInput").value;
+      var acceptTOS = document.getElementById("acceptTOSCheckbox").checked;
 
-  // Nếu nhập đầy đủ, thực hiện đăng ký thành công (hiện tại chưa có xử lý đăng ký, chỉ hiển thị thông báo)
-  Swal.fire({
-    icon: "success",
-    title: "Đăng ký thành công!",
-    text: "Chức năng đang được cập nhật...",
-  });
-}
-</script>
-  <script src="assets/js/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/aos.js"></script>
-  <script src="assets/js/sweetalert.min.js"></script>
-  <script src="assets/js/app.js"></script>
+      if (fullname === "" || email === "" || phone === "" || password === "" || rePassword === "" || !acceptTOS) {
+        Swal.fire({
+          icon: "error",
+          title: "Lỗi!",
+          text: "Vui lòng nhập đầy đủ thông tin và đồng ý với các điều khoản dịch vụ.",
+        });
+        return;
+      }
+
+      Swal.fire({
+        icon: "success",
+        title: "Đăng ký thành công!",
+        text: "Chức năng đang được cập nhật...",
+      });
+    }
+  </script>
 </body>
+
 </html>
+
