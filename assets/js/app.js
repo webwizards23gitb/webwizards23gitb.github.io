@@ -409,7 +409,7 @@ function buildCartItemHTML(tour) {
       </button>
     </div>
   </div>
-  <hr>`;
+  <hr class="mb-3 mt-3">`;
 }
 
 async function renderCartOffcanvas() {
