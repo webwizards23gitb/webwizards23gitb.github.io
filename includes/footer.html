@@ -99,7 +99,7 @@
   </div>
   <script>
     $("#subscribeButton").on("click", function () {
-      var email = document.getElementById("floatingEmailInput").value;
+      var email = $("#floatingEmailInput").value;
       var gmailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
 
       if (email === "") {

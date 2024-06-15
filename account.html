@@ -173,7 +173,8 @@
       var phone = $("#floatingPhoneNumberInput").val();
       var password = $("#floatingPasswordInputRegister").val();
       var rePassword = $("#floatingRePasswordInput").val();
-      var acceptTOS = document.getElementById("acceptTOSCheckbox").checked;
+      var acceptTOS = $("#acceptTOSCheckbox").is(":checked");
+      console.log(acceptTOS);
       var gmailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
 
       if (fullname === "" || email === "" || phone === "" || password === "" || rePassword === "" || !acceptTOS) {
