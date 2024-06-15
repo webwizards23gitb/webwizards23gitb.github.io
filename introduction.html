@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Đặt tour du lịch online</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <!-- Fonts -->
+  <!-- CSS files -->
+  <link rel="stylesheet" href="assets/css/font-awesome.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/image-hover.css">
+  <link href="assets/css/aos.css" rel="stylesheet" />
+  <!-- CSS files -->
+  <!-- JavaScript files -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- JavaScript files -->
+  <style>
+    .swiper {
+      width: 100%;
+      height: 75%;
+    }
+
+    .swiper-slide {
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbarPlaceholder"></div>
+  <!-- Page content -->
+  <div class="container-fill">
+    <div class="card bg-dark text-white" style="border-radius: 0px; border: none;" data-aos="fade-right">
+      <img src="assets/images/intro-background.jpg" class="card-img opacity-25" alt="profile-image" width="100%"
+        height="500px" style="border-radius: 0px; border: none;">
+      <div class="card-img-overlay d-flex justify-content-center flex-column" style="border-radius: 0px; border: none;">
+        <h5 class="card-title h3" style="color: #06a450;">GIỚI THIỆU VỀ TRAVIZARD</h5>
+        <p class="card-text fw-semibold" style="font-size: 1.5rem;">Nền tảng hàng đầu về đặt tour du lịch và thuê khách
+          sạn, cam kết mang đến cho bạn những trải nghiệm du lịch tuyệt vời. Với dịch vụ chuyên nghiệp, đa dạng lựa chọn
+          và giá cả hợp lý, Travizards giúp bạn dễ dàng khám phá thế giới một cách tiện lợi và thoải mái.</p>
+      </div>
+    </div>
+    <div class="p-5">
+      <div class="text-center">
+        <p class="display-4 fw-bold">LÝ DO NÊN CHỌN <span class="text-danger">CHÚNG TÔI</span></p>
+      </div>
+      <div class="mt-3 row">
+        <div class="mt-5 mb-3 col-12 col-lg-4 d-flex flex-column d-flex align-items-center">
+          <div style="width: 100px; height: 100px; background-color: #041675; display: flex; justify-content: center; align-items: center; border-radius: 100%;" class="mb-3">
+            <i class="fa-solid fa-dollar-sign" style="font-size: 4rem; color: white;"></i>
+          </div>
+          <span class="text-danger fw-bold h3">GIÁ CẢ TỐT NHẤT</span>
+          <span class="fw-semibold" style="font-size: 1.3rem;">Chúng tôi cam kết giá tour cạnh tranh nhất thị trường</span>
+        </div>
+
+        <div class="mt-5 mb-3 col-12 col-lg-4 d-flex flex-column d-flex justify-content-center align-items-center">
+          <div style="width: 100px; height: 100px; background-color: #041675; display: flex; justify-content: center; align-items: center; border-radius: 100%;" class="mb-3">
+            <i class="fa-solid fa-star" style="font-size: 4rem; color: white;"></i>
+          </div>
+          <span class="text-danger fw-bold h3">DỊCH VỤ TỐT NHẤT</span>
+          <span class="fw-semibold" style="font-size: 1.3rem;">Chúng tôi thường xuyên kiểm tra chất lượng các dịch vụ trong tổ chức tour, mang đến cho khách hàng sự hài lòng tốt nhất</span>
+        </div>
+
+        <div class="mt-5 mb-3 col-12 col-lg-4 d-flex flex-column d-flex justify-content-center align-items-center">
+          <div style="width: 100px; height: 100px; background-color: #041675; display: flex; justify-content: center; align-items: center; border-radius: 100%;" class="mb-3">
+            <i class="fa-solid fa-phone" style="font-size: 4rem; color: white;"></i>
+          </div>
+          <span class="text-danger fw-bold h3">HỖ TRỢ 24/7</span>
+          <span class="fw-semibold" style="font-size: 1.3rem;">Công ty chúng tôi luôn hỗ trợ quý khách 24/7 xuyên suốt hành trình và hơn thế nữa</span>
+        </div>
+      </div>
+      <hr><br>
+      <div class="text-center">
+        <p class="display-4 fw-bold">KHÁCH HÀNG NÓI GÌ VỀ <span class="text-danger">CHÚNG TÔI</span></p>
+      </div>
+      <!-- Feedbacks swiper -->
+      <div class="feedbacks-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="d-flex justify-content-center feedback-container">
+              <div class="p-3 bg-white border rounded w-100">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                  <img src="assets/images/avatar-ntd.png" loading="lazy"
+                    class="img-fluid object-fit-cover feedback-avatar">
+                  <div class="feedback-content mt-3">
+                    <p class="fw-semibold">Chuyến Đà Lạt 4 ngày trở nên ngắn ngủi vì chúng tôi thật sự yêu mến khí hậu
+                      và phong cảnh nơi đây. Công ty tổ chức tour rất chuyên nghiệp làm chúng tôi rất hài lòng.</p>
+                  </div>
+                  <div class="feedback-author">
+                    <span>Nguyễn Tấn Dũng</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="d-flex justify-content-center feedback-container">
+              <div class="p-3 bg-white border rounded w-100">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                  <img src="assets/images/avatar-nvh.png" loading="lazy"
+                    class="img-fluid object-fit-cover feedback-avatar">
+                  <div class="feedback-content mt-3">
+                    <p class="fw-semibold">HDV tour Đà Lạt rất nhiệt tình và dễ thương, Travizard là một công ty mà bạn
+                      nên thử trải nghiệm. Còn mình vẫn sẽ tiếp tục sử dụng dịch vụ của công ty.</p>
+                  </div>
+                  <div class="feedback-author">
+                    <span>Nguyễn Văn Hoàng</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="d-flex justify-content-center feedback-container">
+              <div class="p-3 bg-white border rounded w-100">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                  <img src="assets/images/avatar-nvc.png" loading="lazy"
+                    class="img-fluid object-fit-cover feedback-avatar">
+                  <div class="feedback-content mt-3">
+                    <p class="fw-semibold">Chúng tôi rất hài lòng về sự chuyên nghiệp của công ty trong tổ chức tour</p>
+                  </div>
+                  <div class="feedback-author">
+                    <span>Nguyễn Văn Cường</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <p class="mt-5 mb-3 display-4 fw-bold">GỌI NGAY CHO <span class="text-danger">CHÚNG TÔI</span></p>
+        </div>
+        <div class="text-center">
+          <p class="display-4 fw-bold text-success">0335237597</span></p>
+        </div>
+      </div>
+      <!-- Feedbacks swiper -->
+    </div>
+    <div id="footerPlaceholder"></div>
+  </div>
+  <!-- Page content -->
+  <script>
+    AOS.init();
+    new Swiper(".feedbacks-swiper", {
+      autoplay: {
+        delay: 3000,
+      },
+      cssMode: true,
+      loop: true,
+    });
+  </script>
+</body>
+
+</html>

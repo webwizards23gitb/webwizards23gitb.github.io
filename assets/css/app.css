@@ -20,6 +20,18 @@ body {
   z-index: 20;
 }
 
+.feedback-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+}
+
+.feedback-author span {
+  color: #007aff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .cart-button {
   border: none;
   color: white;
@@ -60,7 +72,14 @@ body {
   width: 100%;
 }
 
+.feedback-container {
+  width: 100%;
+}
+
 @media only screen and (min-width: 992px) {
+  .feedback-container {
+    width: 75%;
+  }
   body {
     padding: 112px 0px 0px 0px;
   }
