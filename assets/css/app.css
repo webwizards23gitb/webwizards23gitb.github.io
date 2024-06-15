@@ -256,10 +256,6 @@ iframe {
   transition-duration: 100ms;
 }
 
-hr {
-  margin: 0.2rem;
-}
-
 .comment-likes:hover, .comment-dislikes:hover, .comment-report:hover {
   background-color: #e4e6eb;
 }
