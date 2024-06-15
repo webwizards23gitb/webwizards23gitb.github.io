@@ -82,7 +82,6 @@
         </div>
         <div class="col-12 col-lg-6 mt-3 mt-lg-0 register-heading" data-aos="fade-right">
           <!-- Đăng ký -->
-          <hr class="d-block d-lg-none">
           <div class="custom-panel">
             <h3 class="mb-3">CHƯA CÓ TÀI KHOẢN? HÃY ĐĂNG KÝ NGAY</h3>
             <form id="registerForm">
@@ -128,12 +127,22 @@
     function login() {
       var email = document.getElementById("floatingEmailInputLogin").value;
       var password = document.getElementById("floatingPasswordInputLogin").value;
+      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
       if (email === "" || password === "") {
         Swal.fire({
           icon: "error",
           title: "Lỗi!",
           text: "Vui lòng nhập đầy đủ email và mật khẩu.",
+        });
+        return;
+      }
+
+      if (!emailPattern.test(email)) {
+        Swal.fire({
+          icon: "error",
+          title: "Địa chỉ email không hợp lệ!",
+          text: "Vui lòng nhập địa chỉ email đúng định dạng.",
         });
         return;
       }
@@ -165,12 +174,22 @@
       var password = document.getElementById("floatingPasswordInputRegister").value;
       var rePassword = document.getElementById("floatingRePasswordInput").value;
       var acceptTOS = document.getElementById("acceptTOSCheckbox").checked;
+      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
       if (fullname === "" || email === "" || phone === "" || password === "" || rePassword === "" || !acceptTOS) {
         Swal.fire({
           icon: "error",
           title: "Lỗi!",
           text: "Vui lòng nhập đầy đủ thông tin và đồng ý với các điều khoản dịch vụ.",
+        });
+        return;
+      }
+
+      if (!emailPattern.test(email)) {
+        Swal.fire({
+          icon: "error",
+          title: "Địa chỉ email không hợp lệ!",
+          text: "Vui lòng nhập địa chỉ email đúng định dạng.",
         });
         return;
       }
@@ -185,4 +204,3 @@
 </body>
 
 </html>
-
