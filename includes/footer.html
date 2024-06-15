@@ -17,15 +17,15 @@
                 target="_blank"></a>
             </li>
             <li class="social-link me-2">
-              <a href="https://x.com/" aria-label="facebook" class="fa-brands fa-twitter fa-2x"
+              <a href="https://x.com/" aria-label="twitter" class="fa-brands fa-twitter fa-2x"
                 target="_blank"></a>
             </li>
             <li class="social-link me-2">
-              <a href="https://discord.gg/7ucY2wZh" aria-label="facebook" class="fa-brands fa-discord fa-2x"
+              <a href="https://discord.gg/7ucY2wZh" aria-label="discord" class="fa-brands fa-discord fa-2x"
                 target="_blank"></a>
             </li>
             <li class="social-link me-2">
-              <a href="https://wordpress.com/" aria-label="facebook" class="fa-brands fa-wordpress fa-2x"
+              <a href="https://wordpress.com/" aria-label="wordpress" class="fa-brands fa-wordpress fa-2x"
                 target="_blank"></a>
             </li>
           </ul>
@@ -105,6 +105,27 @@
 </div>
 <script>
   $("#subscribeButton").on("click", function () {
+    var email = document.getElementById("floatingEmailInput").value;
+    var gmailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
+
+    if (email === "") {
+      Swal.fire({
+        icon: "error",
+        title: "Lỗi!",
+        text: "Vui lòng nhập địa chỉ email.",
+      });
+      return;
+    }
+
+    if (!gmailPattern.test(email)) {
+      Swal.fire({
+        icon: "error",
+        title: "Địa chỉ email không hợp lệ!",
+        text: "Vui lòng nhập địa chỉ email với miền @gmail.com.",
+      });
+      return;
+    }
+
     Swal.fire({
       icon: "success",
       title: "Đăng ký nhận tin thành công!",
@@ -112,3 +133,4 @@
     });
   });
 </script>
+
