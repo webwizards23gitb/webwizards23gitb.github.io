@@ -24,7 +24,6 @@
   <style>
     .custom-panel {
       background-color: #f8f9fa;
-      
       border-radius: 10px;
     }
 
@@ -34,20 +33,20 @@
 
     @media (max-width: 991px) {
       .custom-panel {
-        margin-top: 20px; /* Khoảng cách giữa đăng ký và đăng nhập trên điện thoại */
+        margin-top: 20px;
       }
     }
 
     .mt-lg-0 {
-      margin-top: 0 !important; /* Xóa margin top ở phiên bản lớn hơn */
+      margin-top: 0 !important;
     }
 
     .d-lg-none {
-      display: none; /* Ẩn dòng ngang trên điện thoại */
+      display: none;
     }
 
     .register-heading {
-      margin-top: 20px; /* Khoảng cách giữa đăng ký và đăng nhập */
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -127,7 +126,7 @@
     function login() {
       var email = document.getElementById("floatingEmailInputLogin").value;
       var password = document.getElementById("floatingPasswordInputLogin").value;
-      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      var gmailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
 
       if (email === "" || password === "") {
         Swal.fire({
@@ -138,11 +137,11 @@
         return;
       }
 
-      if (!emailPattern.test(email)) {
+      if (!gmailPattern.test(email)) {
         Swal.fire({
           icon: "error",
           title: "Địa chỉ email không hợp lệ!",
-          text: "Vui lòng nhập địa chỉ email đúng định dạng.",
+          text: "Vui lòng nhập địa chỉ email với miền @gmail.com.",
         });
         return;
       }
@@ -174,7 +173,7 @@
       var password = document.getElementById("floatingPasswordInputRegister").value;
       var rePassword = document.getElementById("floatingRePasswordInput").value;
       var acceptTOS = document.getElementById("acceptTOSCheckbox").checked;
-      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      var gmailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
 
       if (fullname === "" || email === "" || phone === "" || password === "" || rePassword === "" || !acceptTOS) {
         Swal.fire({
@@ -185,11 +184,11 @@
         return;
       }
 
-      if (!emailPattern.test(email)) {
+      if (!gmailPattern.test(email)) {
         Swal.fire({
           icon: "error",
           title: "Địa chỉ email không hợp lệ!",
-          text: "Vui lòng nhập địa chỉ email đúng định dạng.",
+          text: "Vui lòng nhập địa chỉ email với miền @gmail.com.",
         });
         return;
       }
