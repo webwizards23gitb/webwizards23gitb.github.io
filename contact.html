@@ -81,32 +81,33 @@
     AOS.init();
   </script>
   <script>
-    $("#contactButton").on("click", function () {
-      var fullname = $("#floatingFullnameInput").val().trim();
-      var email = $("#floatingEmailInput").val().trim();
-      var content = $("#floatingContent").val().trim();
-      var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  $("#contactButton").on("click", function () {
+    var fullname = $("#floatingFullnameInput").val().trim();
+    var email = $("#floatingEmailInput").val().trim();
+    var content = $("#floatingContent").val().trim();
+    var gmailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
 
-      if (fullname === "" || email === "" || content === "") {
-        Swal.fire({
-          icon: "error",
-          title: "Gửi phản hồi thất bại!",
-          text: "Vui lòng nhập đầy đủ thông tin vào các trường.",
-        });
-      } else if (!emailPattern.test(email)) {
-        Swal.fire({
-          icon: "error",
-          title: "Địa chỉ email không hợp lệ!",
-          text: "Vui lòng nhập địa chỉ email đúng định dạng.",
-        });
-      } else {
-        Swal.fire({
-          icon: "success",
-          title: "Gửi phản hồi thành công!",
-          text: "Ý kiến của bạn đã được ghi nhận, hãy kiểm tra email thường xuyên.",
-        });
-      }
-    });
+    if (fullname === "" || email === "" || content === "") {
+      Swal.fire({
+        icon: "error",
+        title: "Gửi phản hồi thất bại!",
+        text: "Vui lòng nhập đầy đủ thông tin vào các trường.",
+      });
+    } else if (!gmailPattern.test(email)) {
+      Swal.fire({
+        icon: "error",
+        title: "Địa chỉ email không hợp lệ!",
+        text: "Vui lòng nhập địa chỉ email đúng định dạng.",
+      });
+    } else {
+      Swal.fire({
+        icon: "success",
+        title: "Gửi phản hồi thành công!",
+        text: "Ý kiến của bạn đã được ghi nhận, hãy kiểm tra email thường xuyên.",
+      });
+    }
+  });
+
   </script>
 </body>
 
