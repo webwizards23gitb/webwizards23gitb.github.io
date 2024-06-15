@@ -449,14 +449,13 @@ async function renderCartOffcanvas() {
             <div class="d-flex flex-column fw-bold border rounded p-3" style="font-size: 1.5rem;">
               <span class="mb-2">TÊN TÀI KHOẢN: <span class="text-danger">VO NGOC BAO</span></span>
               <span class="mb-2">SỐ TÀI KHOẢN: <span class="text-danger">4013092005</span></span>
-              <span class="mb-2">NỘI DUNG CHUYỂN KHOẢN: <span class="text-danger">TOUR [NGÀY,THÁNG,NĂM], [SỐ ĐIỆN
-                  THOẠI]</span></span>
+              <span class="mb-2">NỘI DUNG CHUYỂN KHOẢN: <span class="text-danger">TOUR [NGÀY,THÁNG,NĂM], [SỐ ĐIỆN THOẠI]</span></span>
               <span class="mb-2">SỐ TIỀN CHUYỂN KHOẢN: <span class="text-danger">${vndCurrency}</span></span>
               <span class="mb-2">NGÂN HÀNG: MB BANK</span>
             </div>
           </div>
         </div>
-        <hr>
+        <hr class="mt-3 mb-3">
         <div class="d-flex justify-content-between">
           <div>
             <span class="fw-semibold">
