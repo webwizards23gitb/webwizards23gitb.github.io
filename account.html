@@ -24,14 +24,30 @@
   <style>
     .custom-panel {
       background-color: #f8f9fa;
-      padding: 20px;
+      
       border-radius: 10px;
+    }
+
+    .form-floating {
+      width: 100%;
     }
 
     @media (max-width: 991px) {
       .custom-panel {
         margin-top: 20px; /* Khoảng cách giữa đăng ký và đăng nhập trên điện thoại */
       }
+    }
+
+    .mt-lg-0 {
+      margin-top: 0 !important; /* Xóa margin top ở phiên bản lớn hơn */
+    }
+
+    .d-lg-none {
+      display: none; /* Ẩn dòng ngang trên điện thoại */
+    }
+
+    .register-heading {
+      margin-top: 20px; /* Khoảng cách giữa đăng ký và đăng nhập */
     }
   </style>
 </head>
@@ -64,7 +80,7 @@
           </form>
           <!-- Đăng nhập -->
         </div>
-        <div class="col-12 col-lg-6 mt-3 mt-lg-0" data-aos="fade-right">
+        <div class="col-12 col-lg-6 mt-3 mt-lg-0 register-heading" data-aos="fade-right">
           <!-- Đăng ký -->
           <div class="custom-panel">
             <h3 class="mb-3">CHƯA CÓ TÀI KHOẢN? HÃY ĐĂNG KÝ NGAY</h3>
@@ -168,5 +184,4 @@
 </body>
 
 </html>
-
 
