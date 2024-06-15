@@ -1,135 +1,132 @@
-<div class="page-footer">
-  <div class="footer-content">
-    <div class="row mt-3 mb-3">
-      <div class="col-lg-4">
-        <span class="footer-header">
-          <span class="footer-title">THÔNG TIN</span>
-        </span>
-        <div class="mt-3">
-          <p class="mb-1 fw-semibold" style="color: #1b448e;">Số điện thoại</p>
-          <a>0335237597</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Example</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="page-footer">
+    <div class="footer-content">
+      <div class="row mt-3 mb-3">
+        <div class="col-lg-4">
+          <span class="footer-header">
+            <span class="footer-title">THÔNG TIN</span>
+          </span>
+          <div class="mt-3">
+            <p class="mb-1 fw-semibold" style="color: #1b448e;">Số điện thoại</p>
+            <a>0335237597</a>
+          </div>
+          <div class="mt-3">
+            <p class="mb-1 fw-semibold" style="color: #1b448e;">Liên kết mạng xã hội</p>
+            <ul class="d-flex social-links">
+              <li class="social-link me-2">
+                <a href="https://www.facebook.com/profile.php?id=61557953190558" aria-label="facebook" class="fa-brands fa-facebook fa-2x" target="_blank"></a>
+              </li>
+              <li class="social-link me-2">
+                <a href="https://x.com/" aria-label="twitter" class="fa-brands fa-twitter fa-2x" target="_blank"></a>
+              </li>
+              <li class="social-link me-2">
+                <a href="https://discord.gg/7ucY2wZh" aria-label="discord" class="fa-brands fa-discord fa-2x" target="_blank"></a>
+              </li>
+              <li class="social-link me-2">
+                <a href="https://wordpress.com/" aria-label="wordpress" class="fa-brands fa-wordpress fa-2x" target="_blank"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-3" id="receiveNotificationForm">
+            <p class="mb-1 fw-semibold" style="color: #1b448e;">Đăng ký nhận tin khuyến mãi</p>
+            <form>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control align-self-center mb-2" id="floatingEmailInput" placeholder="name@example.com">
+                <label for="floatingEmailInput" style="font-size: 0.75rem;">Địa chỉ email</label>
+                <button id="subscribeButton" class="btn btn-success text-center align-self-center" type="button" style="font-size: 1rem; padding: 0.8rem 1rem 0.8rem 1rem">Đăng ký</button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="mt-3">
-          <p class="mb-1 fw-semibold" style="color: #1b448e;">Liên kết mạng xã hội</p>
-          <ul class="d-flex social-links">
-            <li class="social-link me-2">
-              <a href="https://www.facebook.com/profile.php?id=61557953190558" aria-label="facebook" class="fa-brands fa-facebook fa-2x"
-                target="_blank"></a>
-            </li>
-            <li class="social-link me-2">
-              <a href="https://x.com/" aria-label="twitter" class="fa-brands fa-twitter fa-2x"
-                target="_blank"></a>
-            </li>
-            <li class="social-link me-2">
-              <a href="https://discord.gg/7ucY2wZh" aria-label="discord" class="fa-brands fa-discord fa-2x"
-                target="_blank"></a>
-            </li>
-            <li class="social-link me-2">
-              <a href="https://wordpress.com/" aria-label="wordpress" class="fa-brands fa-wordpress fa-2x"
-                target="_blank"></a>
-            </li>
-          </ul>
+        <div class="col-lg-4">
+          <span class="footer-header">
+            <span class="footer-title">THÀNH VIÊN</span>
+          </span>
+          <div class="d-flex flex-column">
+            <ul class="mt-3 mb-3">
+              <li class="d-flex align-items-center mt-2">
+                <span class="fw-semibold" style="font-size: 1.0rem;">VÕ NGỌC BẢO - 23GITB - 23IT.B010</span>
+                <a href="https://www.facebook.com/sussybaka1337/" aria-label="facebook" class="fa-brands fa-facebook fa-xl ms-2" target="_blank"></a>
+              </li>
+              <li class="d-flex align-items-center mt-2">
+                <span class="fw-semibold" style="font-size: 1.0rem;">NGUYỄN VĂN HOÀNG - 23GITB - 23IT.B065</span>
+                <a href="https://www.facebook.com/profile.php?id=100047695143130" aria-label="facebook" class="fa-brands fa-facebook fa-xl ms-2" target="_blank"></a>
+              </li>
+              <li class="d-flex align-items-center mt-2">
+                <span class="fw-semibold" style="font-size: 1.0rem;">HỒ VĂN KIỆT - 23GITB - 23IT.B104</span>
+                <a href="https://www.facebook.com/vnkt2975addnta" aria-label="facebook" class="fa-brands fa-facebook fa-xl ms-2" target="_blank"></a>
+              </li>
+              <li class="d-flex align-items-center mt-2">
+                <span class="fw-semibold" style="font-size: 1.0rem;">NGUYỄN TẤN DŨNG - 23GITB - 23IT.B026</span>
+                <a href="https://www.facebook.com/nguyenss.nhokss.507" aria-label="facebook" class="fa-brands fa-facebook fa-xl ms-2" target="_blank"></a>
+              </li>
+              <li class="d-flex align-items-center mt-2">
+                <span class="fw-semibold" style="font-size: 1.0rem;">NGUYỄN VĂN CƯỜNG - 23GITB - 23IT.B021</span>
+                <a href="https://www.facebook.com/profile.php?id=100046184703548" aria-label="facebook" class="fa-brands fa-facebook fa-xl ms-2" target="_blank"></a>
+              </li>
+              <li class="d-flex align-items-center mt-2">
+                <span class="fw-semibold" style="font-size: 1.0rem;">TRẦN NGỌC ANH HUY - 23GITB - 23IT.B083</span>
+                <a href="https://www.facebook.com/ANHHUYREAL" aria-label="facebook" class="fa-brands fa-facebook fa-xl ms-2" target="_blank"></a>
+              </li>
+              <li class="d-flex align-items-center mt-2">
+                <span class="fw-semibold" style="font-size: 1.0rem;">LÊ ANH QUÂN - 23GITB - 23IT.B179</span>
+                <a href="https://www.facebook.com/profile.php?id=100034594907474" aria-label="facebook" class="fa-brands fa-facebook fa-xl ms-2" target="_blank"></a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="mt-3" id="receiveNotificationForm">
-          <p class="mb-1 fw-semibold" style="color: #1b448e;">Đăng ký nhận tin khuyến mãi</p>
-          <form>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control align-self-center mb-2" id="floatingEmailInput"
-                placeholder="name@example.com">
-              <label for="floatingEmailInput" style="font-size: 0.75rem;">Địa chỉ email</label>
-              <button id="subscribeButton" class="btn btn-success text-center align-self-center" type="button"
-                style="font-size: 1rem; padding: 0.8rem 1rem 0.8rem 1rem">Đăng ký</button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <div class="col-lg-4">
-        <span class="footer-header">
-          <span class="footer-title">THÀNH VIÊN</span>
-        </span>
-        <div class="d-flex flex-column">
-          <ul class="mt-3 mb-3">
-            <li class="d-flex align-items-center mt-2">
-              <span class="fw-semibold" style="font-size: 1.0rem;">VÕ NGỌC BẢO - 23GITB - 23IT.B010</span>
-              <a href="https://www.facebook.com/sussybaka1337/" aria-label="facebook"
-                class="fa-brands fa-facebook fa-xl ms-2" target="_blank"></a>
-            </li>
-            <li class="d-flex align-items-center mt-2">
-              <span class="fw-semibold" style="font-size: 1.0rem;">NGUYỄN VĂN HOÀNG - 23GITB - 23IT.B065</span>
-              <a href="https://www.facebook.com/profile.php?id=100047695143130" aria-label="facebook"
-                class="fa-brands fa-facebook fa-xl ms-2" target="_blank"></a>
-            </li>
-            <li class="d-flex align-items-center mt-2">
-              <span class="fw-semibold" style="font-size: 1.0rem;">HỒ VĂN KIỆT - 23GITB - 23IT.B104</span>
-              <a href="https://www.facebook.com/vnkt2975addnta" aria-label="facebook"
-                class="fa-brands fa-facebook fa-xl ms-2" target="_blank"></a>
-            </li>
-            <li class="d-flex align-items-center mt-2">
-              <span class="fw-semibold" style="font-size: 1.0rem;">NGUYỄN TẤN DŨNG - 23GITB - 23IT.B026</span>
-              <a href="https://www.facebook.com/nguyenss.nhokss.507" aria-label="facebook"
-                class="fa-brands fa-facebook fa-xl ms-2" target="_blank"></a>
-            </li>
-            <li class="d-flex align-items-center mt-2">
-              <span class="fw-semibold" style="font-size: 1.0rem;">NGUYỄN VĂN CƯỜNG - 23GITB - 23IT.B021</span>
-              <a href="https://www.facebook.com/profile.php?id=100046184703548" aria-label="facebook"
-                class="fa-brands fa-facebook fa-xl ms-2" target="_blank"></a>
-            </li>
-            <li class="d-flex align-items-center mt-2">
-              <span class="fw-semibold" style="font-size: 1.0rem;">TRẦN NGỌC ANH HUY - 23GITB - 23IT.B083</span>
-              <a href="https://www.facebook.com/ANHHUYREAL" aria-label="facebook"
-                class="fa-brands fa-facebook fa-xl ms-2" target="_blank"></a>
-            </li>
-            <li class="d-flex align-items-center mt-2">
-              <span class="fw-semibold" style="font-size: 1.0rem;">LÊ ANH QUÂN - 23GITB - 23IT.B179</span>
-              <a href="https://www.facebook.com/profile.php?id=100034594907474" aria-label="facebook"
-                class="fa-brands fa-facebook fa-xl ms-2" target="_blank"></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="footer-header">
-          <span class="footer-title">LIÊN HỆ</span>
-        </div>
-        <div class="mt-3 h-100">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.7928747664164!2d108.24479817869283!3d15.972189345226068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314210880eedcf27%3A0x88fc9cdcb6d63f85!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiB2w6AgVHJ1eeG7gW4gdGjDtG5nIFZp4buHdCBIw6BuIC0gxJDhuqFpIGjhu41jIMSQw6AgTuG6tW5n!5e0!3m2!1svi!2s!4v1716797553508!5m2!1svi!2s"
-            class="w-100 h-75" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="col-lg-4">
+          <div class="footer-header">
+            <span class="footer-title">LIÊN HỆ</span>
+          </div>
+          <div class="mt-3 h-100">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.7928747664164!2d108.24479817869283!3d15.972189345226068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314210880eedcf27%3A0x88fc9cdcb6d63f85!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiB2w6AgVHJ1eeG7gW4gdGjDtG5nIFZp4buHdCBIw6BuIC0gxJDhuqFpIGjhu41jIMSQw6AgTuG6tW5n!5e0!3m2!1svi!2s!4v1716797553508!5m2!1svi!2s" class="w-100 h-75" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<script>
-  $("#subscribeButton").on("click", function () {
-    var email = document.getElementById("floatingEmailInput").value;
-    var gmailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
+  <script>
+    $("#subscribeButton").on("click", function () {
+      var email = document.getElementById("floatingEmailInput").value;
+      var gmailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
 
-    if (email === "") {
+      if (email === "") {
+        Swal.fire({
+          icon: "error",
+          title: "Lỗi!",
+          text: "Vui lòng nhập địa chỉ email.",
+        });
+        return;
+      }
+
+      if (!gmailPattern.test(email)) {
+        Swal.fire({
+          icon: "error",
+          title: "Địa chỉ email không hợp lệ!",
+          text: "Vui lòng nhập địa chỉ email với miền @gmail.com.",
+        });
+        return;
+      }
+
       Swal.fire({
-        icon: "error",
-        title: "Lỗi!",
-        text: "Vui lòng nhập địa chỉ email.",
+        icon: "success",
+        title: "Đăng ký nhận tin thành công!",
+        text: "Bạn sẽ nhận được thông tin nếu chúng tôi có khuyến mãi mới nhất.",
       });
-      return;
-    }
-
-    if (!gmailPattern.test(email)) {
-      Swal.fire({
-        icon: "error",
-        title: "Địa chỉ email không hợp lệ!",
-        text: "Vui lòng nhập địa chỉ email với miền @gmail.com.",
-      });
-      return;
-    }
-
-    Swal.fire({
-      icon: "success",
-      title: "Đăng ký nhận tin thành công!",
-      text: "Bạn sẽ nhận được thông tin nếu chúng tôi có khuyến mãi mới nhất.",
     });
-  });
-</script>
+  </script>
+</body>
+</html>
+
