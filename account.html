@@ -125,8 +125,8 @@
     AOS.init();
     
     function login() {
-      var email = document.getElementById("floatingEmailInputLogin").value;
-      var password = document.getElementById("floatingPasswordInputLogin").value;
+      var email = $("#floatingEmailInputLogin").val();
+      var password = $("#floatingPasswordInputLogin").val();
       var gmailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
 
       if (email === "" || password === "") {
@@ -168,11 +168,11 @@
     }
 
     function register() {
-      var fullname = document.getElementById("floatingFullnameInput").value;
-      var email = document.getElementById("floatingEmailInputRegister").value;
-      var phone = document.getElementById("floatingPhoneNumberInput").value;
-      var password = document.getElementById("floatingPasswordInputRegister").value;
-      var rePassword = document.getElementById("floatingRePasswordInput").value;
+      var fullname = $("#floatingFullnameInput").val();
+      var email = $("#floatingEmailInputRegister").val();
+      var phone = $("#floatingPhoneNumberInput").val();
+      var password = $("#floatingPasswordInputRegister").val();
+      var rePassword = $("#floatingRePasswordInput").val();
       var acceptTOS = document.getElementById("acceptTOSCheckbox").checked;
       var gmailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
 
