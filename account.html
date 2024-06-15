@@ -35,7 +35,7 @@
       <div class="row">
         <div class="col-12 col-lg-6" data-aos="fade-right">
           <!-- Đăng nhập -->
-          <form>
+          <form id="loginForm">
             <h3 class="mb-3">ĐĂNG NHẬP TÀI KHOẢN</h3>
             <div class="form-floating mb-3">
               <input type="email" class="form-control" id="floatingEmailInputLogin" placeholder="name@example.com">
@@ -51,7 +51,7 @@
                 Lưu trạng thái đăng nhập
               </label>
             </div>
-            <button id="loginButton" type="button" class="btn btn-success">Đăng nhập</button>
+            <button type="button" class="btn btn-success" onclick="login()">Đăng nhập</button>
           </form>
           <!-- Đăng nhập -->
         </div>
@@ -61,7 +61,7 @@
         <div class="col-12 col-lg-6" data-aos="fade-right">
           <!-- Đăng ký -->
           <h3 class="mb-3">CHƯA CÓ TÀI KHOẢN? HÃY ĐĂNG KÝ NGAY</h3>
-          <form>
+          <form id="registerForm">
             <div class="form-floating mb-3">
               <input type="text" class="form-control" id="floatingFullnameInput" placeholder="name@example.com">
               <label for="floatingFullnameInput" style="font-size: 0.75rem;">Họ và tên</label>
@@ -88,7 +88,7 @@
                 Tôi đồng ý với các điều khoản dịch vụ của trang web
               </label>
             </div>
-            <button id="registerButton" type="button" class="btn btn-success">Đăng ký</button>
+            <button type="button" class="btn btn-success" onclick="register()">Đăng ký</button>
           </form>
           <!-- Đăng ký -->
         </div>
@@ -99,9 +99,24 @@
   <!-- Page content -->
   <script>
     AOS.init();
-  </script>
-  <script>
-    $("#loginButton").on("click", function () {
+    
+    function login() {
+      // Lấy giá trị từ form đăng nhập
+      var email = document.getElementById("floatingEmailInputLogin").value;
+      var password = document.getElementById("floatingPasswordInputLogin").value;
+
+      // Kiểm tra các trường có được nhập đầy đủ hay không
+      if (email === "" || password === "") {
+        // Hiển thị thông báo lỗi nếu có trường nào chưa nhập đầy đủ
+        Swal.fire({
+          icon: "error",
+          title: "Lỗi!",
+          text: "Vui lòng nhập đầy đủ email và mật khẩu.",
+        });
+        return;
+      }
+
+      // Nếu nhập đầy đủ, thực hiện đăng nhập thành công
       const Toast = Swal.mixin({
         toast: true,
         position: "top-end",
@@ -120,16 +135,38 @@
       setTimeout(function () {
         window.location.href = "index.html";
       }, 5000);
-    });
+    }
 
-    $("#registerButton").on("click", function () {
-      Swal.fire({
-        icon: "success",
-        title: "Đăng ký thành công!",
-        text: "Chức năng đang được cập nhật...",
-      });
+    function register() {
+      // Lấy giá trị từ form đăng ký
+      var fullname = document.getElementById("floatingFullnameInput").value;
+      var email = document.getElementById("floatingEmailInputRegister").value;
+      var phone = document.getElementById("floatingPhoneNumberInput").value;
+      var password = document.getElementById("floatingPasswordInput")
+  // Kiểm tra các trường có được nhập đầy đủ và đồng ý điều khoản hay không
+  if (fullname === "" || email === "" || phone === "" || password === "" || rePassword === "" || !acceptTOS) {
+    // Hiển thị thông báo lỗi nếu có trường nào chưa nhập đầy đủ hoặc không đồng ý điều khoản
+    Swal.fire({
+      icon: "error",
+      title: "Lỗi!",
+      text: "Vui lòng nhập đầy đủ thông tin và đồng ý với các điều khoản dịch vụ.",
     });
-  </script>
+    return;
+  }
+
+  // Nếu nhập đầy đủ, thực hiện đăng ký thành công (hiện tại chưa có xử lý đăng ký, chỉ hiển thị thông báo)
+  Swal.fire({
+    icon: "success",
+    title: "Đăng ký thành công!",
+    text: "Chức năng đang được cập nhật...",
+  });
+}
+</script>
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/sweetalert.min.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
-
 </html>
