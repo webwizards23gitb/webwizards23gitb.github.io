@@ -517,7 +517,7 @@ async function renderComments(commentType, selector) {
         <div class="mt-3 mb-3">
           <span style="font-size: 1.15rem;">${comment.content}</span>
         </div>
-        <hr>
+        <hr style="margin: 0.2rem">
         <div class="d-flex comment-actions justify-content-between">
           <button class="comment-likes">
             <i class="fa-solid fa-heart"></i>
@@ -532,7 +532,7 @@ async function renderComments(commentType, selector) {
             <span class="fw-semibold">Report</span>
           </button>
         </div>
-        <hr>
+        <hr style="margin: 0.2rem">
         <!-- Comment content -->
       </div>
     </div>
