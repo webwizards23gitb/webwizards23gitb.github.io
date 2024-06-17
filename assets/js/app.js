@@ -392,7 +392,7 @@ function getRandInteger(min, max) {
 }
 
 function buildCartItemHTML(tourInCart) {
-  const tourInCartIndentifier = `${tourType}-${tourInCart.tourObject.id}`;
+  const tourInCartIndentifier = `${tourInCart.tourType}-${tourInCart.tourObject.id}`;
   const tour = tourInCart.tourObject;
   return `
   <div class="row" id="${tourInCartIndentifier}">
@@ -487,7 +487,11 @@ async function renderCartOffcanvas() {
     $('button[id*="delete"]').on("click", async function(event) {
       event.preventDefault();
       const tourCartId = this.id.replaceAll("delete-", "");
-      deleteCartItem(tourType, tour);
+      const tourInfo = tourCartId.split("-");
+      const tourType = tourInfo[0];
+      const tourId = +tourInfo[1];
+      const tourObject = await getTourById(tourType, tourId);
+      deleteCartItem(tourType, tourObject);
       await Swal.fire({
         icon: "success",
         title: "Xoá đơn hàng thành công!",
@@ -499,7 +503,7 @@ async function renderCartOffcanvas() {
   <!-- Cart offcanvas -->
   <script>
     $("#purchaseCartButton").on("click", function () {
-      await Swal.fire({
+      Swal.fire({
         icon: "success",
         title: "Thanh toán thành công!",
         text: "Chúng tôi sẽ liên hệ lại bạn qua số điện thoại để tiến hành chuẩn bị.",

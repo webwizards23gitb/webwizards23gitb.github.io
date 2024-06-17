@@ -44,7 +44,9 @@ function addTourToCart(tourType, tourObject) {
 
 function deleteCartItem(tourType, tourObject) {
   const cartObject = getCart();
-  const newCartObject = cartObject.filter(cartItem => cartItem.tourObject === tourType && cartItem.tourObject.id === tourObject.id);
+  console.log(tourType, tourObject.id);
+  const newCartObject = cartObject.filter(cartItem => !(cartItem.tourType === tourType && cartItem.tourObject.id === tourObject.id));
+  console.log(newCartObject);
   setCart(newCartObject);
 }
 
