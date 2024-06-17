@@ -377,6 +377,9 @@ async function renderTourDetails(selector, tourType, tourId) {
       </div>
     </div>
   </div>
+  <script>
+    const tour = ${ JSON.stringify(tour) }
+  </script>
   `;
   $(selector).html(tourDetailsHTML);
   const priceVND = valueToVND(tour.price);
@@ -388,23 +391,33 @@ function getRandInteger(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
 
-function buildCartItemHTML(tour) {
+function buildCartItemHTML(tourInCart) {
+  const tourInCartIndentifier = `${tourType}-${tourInCart.tourObject.id}`;
+  const tour = tourInCart.tourObject;
   return `
-  <div class="row">
+  <div class="row" id="${tourInCartIndentifier}">
     <div class="col-2">
       <img src="${tour.picture}" class="img-fluid object-fit-cover">
     </div>
-    <div class="d-flex flex-column ps-3 pe-3 col-8">
+    <div class="d-flex flex-column ps-3 pe-3 col-8 justify-content-between">
       <span class="fw-semibold">${tour.title}</span>
-      <span class="fw-semibold">
-        Giá:
-        <span class="text-danger" style="font-size: 1.5rem">
-          ${ valueToVND(tour.price) }
+      <div class="d-flex justify-content-between">
+        <span class="fw-semibold">
+          Giá:
+          <span class="text-danger fw-bold">
+            ${ valueToVND(tour.price) }
+          </span>
         </span>
-      </span>
+        <span class="fw-semibold">
+          Số lượng:
+          <span class="text-danger fw-bold">
+            ${ tourInCart.quantity }
+          </span>
+        </span>
+      </div>
     </div>
     <div class="d-flex col-2 justify-content-center align-items-center">
-      <button type="button" class="btn btn-danger">
+      <button type="button" class="btn btn-danger" id="delete-${tourInCartIndentifier}">
         <i class="fa-solid fa-trash"></i>
       </button>
     </div>
@@ -414,21 +427,17 @@ function buildCartItemHTML(tour) {
 
 async function renderCartOffcanvas() {
   var cartItemsHTML = "";
-  const randTourID = getRandInteger(1, 25);
-  const randVietnamTour = await getTourById("vietnamTours", randTourID);
-  cartItemsHTML += buildCartItemHTML(randVietnamTour);
-  const randForeignTour = await getTourById("foreignTours", randTourID);
-  cartItemsHTML += buildCartItemHTML(randForeignTour);
-  const vndCurrency = valueToVND(randVietnamTour.price + randForeignTour.price);
+  const toursInCart = getCart();
+  var totalPurchase = 0;
+  for (const tourInCart of toursInCart) {
+    const cartItemHTML = buildCartItemHTML(tourInCart);
+    totalPurchase += tourInCart.tourObject.price * tourInCart.quantity;
+    cartItemsHTML += cartItemHTML;
+  }
+  const vndCurrency = valueToVND(totalPurchase);
   $(".container-fill").append(`
   <!-- Cart offcanvas -->
   <div id="cartOffcanvasPlaceholder">
-    <div class="cart-button-container">
-      <button class="cart-button" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasCart" aria-controls="offcanvasCart" aria-label="Toggle cart offcanvas">
-        <i class="fa-solid fa-bag-shopping fa-xl"></i>
-      </button>
-    </div>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart">
       <div class="offcanvas-header">
         <h3 class="offcanvas-title">
@@ -474,10 +483,23 @@ async function renderCartOffcanvas() {
       </div>
     </div>
   </div>
+  <script>
+    $('button[id*="delete"]').on("click", async function(event) {
+      event.preventDefault();
+      const tourCartId = this.id.replaceAll("delete-", "");
+      deleteCartItem(tourType, tour);
+      await Swal.fire({
+        icon: "success",
+        title: "Xoá đơn hàng thành công!",
+        text: "Vui lòng kiểm tra lại giỏ hàng!",
+      });
+      location.reload();
+    });
+  </script>
   <!-- Cart offcanvas -->
   <script>
     $("#purchaseCartButton").on("click", function () {
-      Swal.fire({
+      await Swal.fire({
         icon: "success",
         title: "Thanh toán thành công!",
         text: "Chúng tôi sẽ liên hệ lại bạn qua số điện thoại để tiến hành chuẩn bị.",

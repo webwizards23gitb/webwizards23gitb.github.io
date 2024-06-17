@@ -148,6 +148,18 @@
   <script>
     AOS.init();
   </script>
+  <script>
+    $("#confirmPurchase").on("click", async event => {
+      event.preventDefault();
+      addTourToCart(tourType, tour);
+      await Swal.fire({
+        icon: "success",
+        title: "Thanh toán thành công!",
+        text: "Vui lòng kiểm tra lại giỏ hàng",
+      });
+      location.reload();
+    });
+  </script>
 </body>
 
 </html>

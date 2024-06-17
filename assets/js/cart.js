@@ -1,75 +1,65 @@
 const VIETNAM_TOURS = "vietnamTours";
 const FOREIGN_TOURS = "foreignTours";
 
-const blankToursCart = {
-  [VIETNAM_TOURS]: [],
-  [FOREIGN_TOURS]: []
-};
+const defaultToursCart = [];
 
-if (getToursCart() === null) {
-  setToursCart(blankToursCart);
+if (getCart() === null) {
+  setCart(defaultToursCart);
 }
 
-/*
-const toursCart = {
-  "vietnamTours": [
-    {
-      tour: [Object],
-      quantity: 1,
+function getCart() {
+  const cartString = localStorage.getItem("cart");
+  return JSON.parse(cartString);
+}
+
+function findTourInCart(tourType, tourObject) {
+  const toursInCart = getCart();
+  try {
+    for (const tourInCart of toursInCart) {
+      if (tourInCart.tourObject.id === tourObject.id && tourInCart.tourType === tourType) {
+        return tourInCart;
+      }
     }
-  ]
-};
-*/
-
-function setToursCart(toursCart) {
-  const toursCartString = JSON.stringify(toursCart);
-  localStorage.setItem("toursCart", toursCartString);
-}
-
-function getToursCart() {
-  const toursCartString = localStorage.getItem("toursCart");
-  return JSON.parse(toursCartString);
-}
-
-function getTourInfoInCart(tourType, tourId) {
-  const toursCart = getToursCart();
-  for (var count = 0; count < toursCart[tourType].length; count++) {
-    if (toursCart[tourType][count].tour.id === tourId) {
-      return toursCart[tourType][count];
-    }
+    return null;
+  } catch (exception) {
+    return null;
   }
-  return false;
 }
 
-async function addToCart(tourType, tourId) {
-  const tourInfoInCart = getTourInfoInCart(tourType, tourId);
-  if (tourInfoInCart) {
-    updateTourQuantity(tourType, tourId, tourInfoInCart.quantity + 1);
+function addTourToCart(tourType, tourObject) {
+  const foundTour = findTourInCart(tourType, tourObject);
+  if (foundTour !== null) {
+    updateQuantity(tourType, tourObject, foundTour.quantity + 1);
     return;
   }
-  const tour = await getTourById(tourType, tourId);
-  const tourCartItem = {
-    tour: tour,
+  const tourInCart = {
+    tourObject: tourObject,
+    tourType: tourType,
     quantity: 1
   };
-  const toursCart = getToursCart();
-  toursCart[tourType].push(tourCartItem);
-  setToursCart(toursCart);
+  const toursInCart = getCart();
+  toursInCart.push(tourInCart);
+  setCart(toursInCart);
 }
 
-async function updateTourQuantity(tourType, tourId, quantity) {
-  const toursCart = getToursCart();
-  const tours = toursCart[tourType];
-  for (var count = 0; count < tours.length; count++) {
-    if (tours[count].tour.id === tourId) {
-      toursCart[tourType][count]["quantity"] = quantity;
+function deleteCartItem(tourType, tourObject) {
+  const cartObject = getCart();
+  const newCartObject = cartObject.filter(cartItem => cartItem.tourObject === tourType && cartItem.tourObject.id === tourObject.id);
+  setCart(newCartObject);
+}
+
+function updateQuantity(tourType, tourObject, quantity) {
+  const toursInCart = getCart();
+  for (const tourInCart of toursInCart) {
+    if (tourInCart.tourObject.id === tourObject.id && tourInCart.tourType === tourType) {
+      tourInCart.quantity = quantity;
       break;
     }
   }
-  setToursCart(toursCart);
+  setCart(toursInCart);
 }
 
-async function debug() {
-  const debugObject = getToursCart();
-  console.log(debugObject);
+function setCart(cartObject) {
+  const cartString = JSON.stringify(cartObject);
+  localStorage.setItem("cart", cartString);
 }
