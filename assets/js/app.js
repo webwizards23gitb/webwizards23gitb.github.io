@@ -125,7 +125,7 @@ async function renderSliderTours(selector, tourType) {
     const tourHref =
       "bookTour.html?tourType=" + tourType + "&tourId=" + tour.id;
     const tourHTML = `
-    <div class="swiper-slide">
+    <div class="swiper-slide tours-slide">
       <div class="card" style="width: 20rem">
         <div class="hovereffect">
           <img class="card-img-top" src="${tour.picture}" alt="">
