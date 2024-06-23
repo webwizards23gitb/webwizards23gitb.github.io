@@ -10,6 +10,12 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+  <div class="cart-button-container">
+    <button class="cart-button" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasCart" aria-controls="offcanvasCart" aria-label="Toggle cart offcanvas">
+      <i class="fa-solid fa-bag-shopping fa-xl"></i>
+    </button>
+  </div>
   <div class="page-footer">
     <div class="footer-content">
       <div class="row mt-3 mb-3">
@@ -42,8 +48,8 @@
             <p class="mb-1 fw-semibold" style="color: #1b448e;">Đăng ký nhận tin khuyến mãi</p>
             <form>
               <div class="form-floating mb-3">
-                <input type="email" class="form-control align-self-center mb-2" id="floatingEmailInput" placeholder="name@example.com">
-                <label for="floatingEmailInput" style="font-size: 0.75rem;">Địa chỉ email</label>
+                <input type="email" class="form-control align-self-center mb-2" id="subscriptionEmail" placeholder="name@example.com">
+                <label for="subscriptionEmail" style="font-size: 0.75rem;">Địa chỉ email</label>
                 <button id="subscribeButton" class="btn btn-success text-center align-self-center" type="button" style="font-size: 1rem; padding: 0.8rem 1rem 0.8rem 1rem">Đăng ký</button>
               </div>
             </form>
@@ -99,9 +105,8 @@
   </div>
   <script>
     $("#subscribeButton").on("click", function () {
-      var email = document.getElementById("floatingEmailInput").value;
+      var email = $("#subscriptionEmail").val();
       var gmailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
-
       if (email === "") {
         Swal.fire({
           icon: "error",
@@ -110,7 +115,6 @@
         });
         return;
       }
-
       if (!gmailPattern.test(email)) {
         Swal.fire({
           icon: "error",
@@ -119,7 +123,6 @@
         });
         return;
       }
-
       Swal.fire({
         icon: "success",
         title: "Đăng ký nhận tin thành công!",
