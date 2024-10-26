@@ -2,114 +2,146 @@
 <html lang="en">
 
 <head>
-  <title>Đặt tour du lịch online</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
-  <!-- Fonts -->
-  <!-- CSS files -->
-  <link rel="stylesheet" href="assets/css/font-awesome.css" />
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/app.css" />
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="assets/css/image-hover.css">
-  <link href="assets/css/aos.css" rel="stylesheet" />
-  <!-- CSS files -->
-  <!-- JavaScript files -->
-  <script src="assets/js/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/aos.js"></script>
-  <script src="assets/js/sweetalert.min.js"></script>
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/cart.js"></script>
-  <!-- JavaScript files -->
-  <style>
-    .swiper {
-      width: 100%;
-      height: 75%;
-    }
+    <title>Đặt tour du lịch online</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <!-- CSS files -->
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/image-hover.css">
+    <link href="assets/css/aos.css" rel="stylesheet" />
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  </style>
+    <link rel="icon" href="https://scontent.xx.fbcdn.net/v/t1.15752-9/440835527_1136786374199039_1045185982473270085_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=iB99M7OTNLoQ7kNvgEZtr6h&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&_nc_gid=Aj6RDrEfR2urSpW6rcb08aA&oh=03_Q7cD1QGuYoMgvnALzuhtnf7JaJnE_ytatI5T9CB7ZYxRYbdceg&oe=672F2116" type="image/x-icon">
+
+    <!-- JavaScript files -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/sweetalert.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background: url('https://imgchinhsachcuocsong.vnanet.vn/MediaUpload/Medium/2023/11/01/101247-vna_potal_du_lich_viet_nam_trai_nghiem_du_lich_sinh_thai_rung_duoc_o_vinh_nha_trang_stand.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+        }
+
+        .container-fill {
+           
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+        }
+
+        .form-control::placeholder {
+            color: #000;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border: none;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+        h3 {
+            color: #FFD700; /* Màu vàng sáng hơn cho tiêu đề */
+        }
+
+        .form-check-label {
+            color: #000; /* Màu chữ cho checkbox */
+        }
+
+        .login-message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 
 <body>
-  <div id="navbarPlaceholder"></div>
-  <!-- Page content -->
-  <div class="container-fill">
-    <div class="p-5 mt-5">
-      <div class="p-3 row border" id="contactFormContainer">
-        <div class="col-12" data-aos="fade-right">
-          <form>
-            <h3 class="mb-3">LIÊN HỆ HOẶC ĐÓNG GÓP Ý KIẾN</h3>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="floatingFullnameInput" placeholder="name@example.com">
-              <label for="floatingFullnameInput" style="font-size: 0.75rem;">Họ và tên</label>
+    <div id="navbarPlaceholder"></div>
+    <!-- Page content -->
+    <div class="container-fill">
+        <div class="p-5 mt-5">
+            <div class="p-3 row border" id="contactFormContainer">
+                <div class="col-12" data-aos="fade-right">
+                    <form>
+                        <h3 class="mb-3">LIÊN HỆ HOẶC ĐÓNG GÓP Ý KIẾN</h3>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingFullnameInput" placeholder="name@example.com">
+                            <label for="floatingFullnameInput" style="font-size: 0.75rem;">Họ và tên</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingEmailInput" placeholder="name@example.com">
+                            <label for="floatingEmailInput" style="font-size: 0.75rem;">Địa chỉ email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingContent"
+                                style="height: 100px"></textarea>
+                            <label for="floatingContent">Nội dung</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" value="" id="sendLastestMessageCheckbox">
+                            <label class="form-check-label" for="sendLastestMessageCheckbox">
+                                Gửi email thông báo cho tôi khi có phản hồi mới nhất
+                            </label>
+                        </div>
+                        <button id="contactButton" type="button" class="btn btn-success">Gửi ý kiến</button>
+                    </form>
+                </div>
             </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="floatingEmailInput" placeholder="name@example.com">
-              <label for="floatingEmailInput" style="font-size: 0.75rem;">Địa chỉ email</label>
-            </div>
-            <div class="form-floating mb-3">
-              <textarea class="form-control" placeholder="Leave a comment here" id="floatingContent"
-                style="height: 100px"></textarea>
-              <label for="floatingContent">Nội dung</label>
-            </div>
-            <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" value="" id="sendLastestMessageCheckbox">
-              <label class="form-check-label" for="sendLastestMessageCheckbox">
-                Gửi email thông báo cho tôi khi có phản hồi mới nhất
-              </label>
-            </div>
-            <button id="contactButton" type="button" class="btn btn-success">Gửi ý kiến</button>
-          </form>
         </div>
-      </div>
+        <div id="footerPlaceholder"></div>
     </div>
-    <!-- Foreign tours swiper -->
-    <div id="footerPlaceholder"></div>
-  </div>
-  <!-- Page content -->
-  <script>
-    AOS.init();
-  </script>
-  <script>
-  $("#contactButton").on("click", function () {
-    var fullname = $("#floatingFullnameInput").val().trim();
-    var email = $("#floatingEmailInput").val().trim();
-    var content = $("#floatingContent").val().trim();
-    var gmailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
+    <!-- Page content -->
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        $("#contactButton").on("click", function () {
+            var fullname = $("#floatingFullnameInput").val().trim();
+            var email = $("#floatingEmailInput").val().trim();
+            var content = $("#floatingContent").val().trim();
+            var gmailPattern = /^[a-zA-Z0-9._-]+@gmail\.com$/;
 
-    if (fullname === "" || email === "" || content === "") {
-      Swal.fire({
-        icon: "error",
-        title: "Gửi phản hồi thất bại!",
-        text: "Vui lòng nhập đầy đủ thông tin vào các trường.",
-      });
-    } else if (!gmailPattern.test(email)) {
-      Swal.fire({
-        icon: "error",
-        title: "Địa chỉ email không hợp lệ!",
-        text: "Vui lòng nhập địa chỉ email đúng định dạng.",
-      });
-    } else {
-      Swal.fire({
-        icon: "success",
-        title: "Gửi phản hồi thành công!",
-        text: "Ý kiến của bạn đã được ghi nhận, hãy kiểm tra email thường xuyên.",
-      });
-    }
-  });
-
-  </script>
+            if (fullname === "" || email === "" || content === "") {
+                Swal.fire({
+                    icon: "error",
+                    title: "Gửi phản hồi thất bại!",
+                    text: "Vui lòng nhập đầy đủ thông tin vào các trường.",
+                });
+            } else if (!gmailPattern.test(email)) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Địa chỉ email không hợp lệ!",
+                    text: "Vui lòng nhập địa chỉ email đúng định dạng.",
+                });
+            } else {
+                Swal.fire({
+                    icon: "success",
+                    title: "Gửi phản hồi thành công!",
+                    text: "Ý kiến của bạn đã được ghi nhận, hãy kiểm tra email thường xuyên.",
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
