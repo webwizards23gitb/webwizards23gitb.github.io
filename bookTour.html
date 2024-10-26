@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/image-hover.css">
   <link href="assets/css/aos.css" rel="stylesheet" />
+
+  <link rel="icon" href="https://scontent.xx.fbcdn.net/v/t1.15752-9/440835527_1136786374199039_1045185982473270085_n.png?_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=iB99M7OTNLoQ7kNvgEZtr6h&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&_nc_gid=Aj6RDrEfR2urSpW6rcb08aA&oh=03_Q7cD1QGuYoMgvnALzuhtnf7JaJnE_ytatI5T9CB7ZYxRYbdceg&oe=672F2116" type="image/x-icon">
+
   <!-- CSS files -->
   <!-- JavaScript files -->
   <script src="assets/js/jquery-3.7.1.min.js"></script>
@@ -41,9 +44,12 @@
 
       <div class="mt-5">
         <hr>
-        <div class="d-flex justify-content-center align-items-center m-5"><i class="fa fa-info-circle fa-xl me-2"
-            aria-hidden="true"></i><span class="h2">THÔNG TIN LIÊN HỆ</span></div>
+        <div class="d-flex justify-content-center align-items-center m-5">
+          <i class="fa fa-info-circle fa-xl me-2" aria-hidden="true"></i>
+          <span class="h2">THÔNG TIN LIÊN HỆ</span>
+        </div>
         <!-- Contact form -->
+             <!-- Contact form -->
         <form>
           <div class="row">
             <div class="col-sm-12 col-lg-4">
@@ -75,7 +81,7 @@
             <div class="col-sm-12 col-lg-8">
               <div class="form-group mb-3">
                 <label class="mb-2">Ghi chú</label>
-                <input type="text" class="form-control" placeholder="Dạ em chào đại ca ạ">
+                <input type="text" class="form-control" placeholder="123">
               </div>
             </div>
           </div>
@@ -106,6 +112,19 @@
               </div>
             </div>
           </div>
+          <hr class="mb-3">
+          <div class="row">
+            <div class="col-12">
+              <div class="float-end w-sm-100 w-lg-50">
+                <form>
+                  
+                     
+                     
+                    </div>
+                  </div>
+                </form>
+        <form>
+          <!-- Form content omitted for brevity -->
           <hr class="mb-3">
           <div class="row">
             <div class="col-12">
@@ -149,6 +168,18 @@
     AOS.init();
   </script>
   <script>
+    // Xử lý khi nhấn vào nút "Kiểm tra"
+    $("#checkCouponCode").on("click", event => {
+      event.preventDefault();
+      // Hiển thị thông báo mã giảm giá
+      Swal.fire({
+        icon: "success", // Icon hiển thị là dấu tích thành công
+        title: "Chúc mừng!", // Tiêu đề thông báo
+        text: "Chúc mừng quý khách đã được mã giảm giá 2 triệu của chúng tôi!", // Nội dung thông báo
+        confirmButtonText: "OK", // Nút xác nhận
+      });
+    });
+
     $("#confirmPurchase").on("click", async event => {
       event.preventDefault();
       addTourToCart(tourType, tour);
